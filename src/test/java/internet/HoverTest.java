@@ -12,12 +12,12 @@ public class HoverTest {
     @BeforeMethod
     void setUp() {
         Browser.openBrowser("chrome");
-        HoverPage hoverPage = new HoverPage();
+        hoverPage = new HoverPage();
         hoverPage.open();
     }
 
     @Test
-    void hoverToImage(){ //done
+    void hoverToImage(){
         hoverPage.hoverOverFirstImage();
 
         String image1Profile = hoverPage.getFirstImageProfileText();
