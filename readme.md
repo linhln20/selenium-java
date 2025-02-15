@@ -15,4 +15,12 @@ mvn clean test
 
 
 ## How to write a new test case with page object model
-TDB
+
+- Define Test Class [WebTableTest](./src/test/java/internet/DueTableTest.java)
+  - Test Class naming with suffix Test
+- Define Page class [WebTablePage](./src/test/java/internet/pages/WebTablePage.java)
+  - Page Class naming with suffix Page.
+
+## Supports
+-  Selenium Owner methods
+- 
