@@ -5,7 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import supports.Browser;
 
-public class HyperLink {
+public class HyperLinkTest {
     /**
      * TC04: Hyper link : Hyperlink - link text
      * Open browser

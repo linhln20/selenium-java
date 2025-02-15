@@ -3,22 +3,11 @@ package internet;
 import internet.pages.CaptureScreenShotPage;
 import internet.pages.DynamicLoadingPage;
 import internet.pages.KeyPressPage;
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import supports.Browser;
 
-import java.io.File;
-import java.io.IOException;
-import java.time.Duration;
-
-public class KeyActions {
+public class KeyActionsTest {
     @Test //done
     void keyPress(){
         Browser.openBrowser("chrome");

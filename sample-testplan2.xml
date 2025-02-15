@@ -13,7 +13,7 @@
             <class name="internet.FormAuthenticationTest"/>
             <class name="internet.DropDownTest"/>
             <class name="internet.HoverTest"/>
-            <class name="internet.HyperLink"/>
+            <class name="internet.HyperLinkTest"/>
             <class name="internet.JavaScriptAlert"/>
             <class name="internet.NestedFrameTest"/>
             <class name="internet.DropDownTest"/>

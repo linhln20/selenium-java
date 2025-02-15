@@ -14,41 +14,11 @@ import java.util.stream.Collectors;
 import static supports.Browser.visit;
 
 public class WebTablePage {
+    private By tableRows = By.xpath("//table[@id='table1']/tbody/tr");
+
     public void open() {
         visit("https://the-internet.herokuapp.com/tables");
     }
-
-    // XPath for locating the table rows
-    private By rows = By.xpath("//table[@id='table1']/tbody/tr");
-    private By dueColumn = By.xpath("//table[@id='table1']/tbody/tr/td[4]");
-
-
-    // Method to get all due values
-    public List<Double> getDueValues() {
-        return Browser.getDriver().findElements(dueColumn)
-                .stream()
-                .map(cell -> Double.parseDouble(cell.getText().replace("$", "")))
-                .collect(Collectors.toList());
-    }
-
-    // Method to get the first name from a row
-    public String getFirstName(int rowIndex) {
-        return Browser.getText(By.xpath(String.format("//table[@id='table1']/tbody/tr[%d]/td[2]", rowIndex)));
-    }
-
-    // Method to get the last name from a row
-    public String getLastName(int rowIndex) {
-        return Browser.getText(By.xpath(String.format("//table[@id='table1']/tbody/tr[%d]/td[1]", rowIndex)));
-    }
-
-    // Method to get the row with the max due value
-    public int getMaxDueRowIndex() {
-        List<Double> dueValues = getDueValues();
-        Double maxDueValue = dueValues.stream().max(Double::compare).orElseThrow();
-        return dueValues.indexOf(maxDueValue);
-    }
-
-    private By tableRows = By.xpath("//table[@id='table1']/tbody/tr");
 
 
     public List<Person> getTableData() {
@@ -64,13 +34,18 @@ public class WebTablePage {
         return people;
     }
 
-    public String getMaxDuePerson() {
-        return getTableData().stream()
+    public List<String> getMaxDuePerson() {
+        Double maxDueValue = getTableData().stream()
                 .max(Comparator.comparing(Person::getDue))
+                .get()
+                .getDue();
+        return getTableData().stream()
+                .filter(p -> p.getDue().equals(maxDueValue))
                 .map(Person::getFullName)
-                .orElseThrow();
+                .toList();
     }
-    public List<String> getMinDuePerson(){
+
+    public List<String> getMinDuePerson() {
         Double minDueValue = getTableData()
                 .stream()
                 .min(Comparator.comparing(Person::getDue))

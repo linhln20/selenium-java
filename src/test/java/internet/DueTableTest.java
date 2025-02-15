@@ -21,13 +21,11 @@ public class DueTableTest {
 
     @Test
     void verifyMaxDuePerson() {
-        Assert.assertEquals(webTablePage.getMaxDuePerson(), "Doe Jason");
+        Assert.assertEquals(webTablePage.getMaxDuePerson(), List.of("Doe Jason"));
     }
-
 
     @Test
     void verifyMinimumDueValuePerson() {
-
         Assert.assertEquals(webTablePage.getMinDuePerson(), List.of("Smith John", "Conway Tim"));
     }
 
