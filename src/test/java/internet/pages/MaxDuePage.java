@@ -55,7 +55,7 @@ public class MaxDuePage {
             List<WebElement> cells = row.findElements(By.xpath("./td"));
             String firstName = cells.get(0).getText();
             String lastName = cells.get(1).getText();
-            Double due = Double.parseDouble(cells.get(3).getText().replace("$", ""));
+            String due = cells.get(3).getText().replace("$", "");
             people.add(new Person(firstName, lastName, due));
         }
         return people;
