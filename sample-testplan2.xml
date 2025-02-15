@@ -1,4 +1,9 @@
 <suite name="Sample">
+    <groups>
+        <run>
+            <exclude name="wip"/>
+        </run>
+    </groups>
     <test name="Chrome Browser">
         <parameter name="browser" value="chrome"/>
         <parameter name="url" value="https://the-internet.herokuapp.com"/>
