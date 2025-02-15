@@ -13,7 +13,6 @@ public class NestedFrameTest {
 
         nestedFrameTestPage.swithFame("frame-top");
         nestedFrameTestPage.swithFame("frame-left");
-
         nestedFrameTestPage.contains("LEFT");
 
         nestedFrameTestPage.swithParentFame();
