@@ -133,7 +133,6 @@ public class Browser {
     driver.findElement(locator).sendKeys(text);
     }
 
-
     public static void quit(){
         driver.quit();
     }
