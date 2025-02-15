@@ -4,7 +4,7 @@ import supports.Browser;
 
 import static supports.Browser.visit;
 
-public class HyperLinkpage {
+public class HyperLinkPage {
     public void open(){
         visit("https://the-internet.herokuapp.com/status_codes");
     }

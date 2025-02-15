@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import supports.Browser;
 
-public class JavaScriptAlert {
+public class JavaScriptAlertTest {
     JavaScriptAlertPage javaScriptAlertPage;
 
     @BeforeMethod

@@ -1,6 +1,6 @@
 package internet;
 
-import internet.pages.HyperLinkpage;
+import internet.pages.HyperLinkPage;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -8,11 +8,11 @@ import org.testng.annotations.Test;
 import supports.Browser;
 
 public class HyperLinkTest {
-    HyperLinkpage hyperlinkpage;
+    HyperLinkPage hyperlinkpage;
     @BeforeMethod
     void setUp() {
         Browser.openBrowser("chrome");
-        hyperlinkpage = new HyperLinkpage();
+        hyperlinkpage = new HyperLinkPage();
         hyperlinkpage.open();
     }
     @Test

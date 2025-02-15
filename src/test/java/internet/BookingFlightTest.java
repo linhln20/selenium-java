@@ -18,7 +18,7 @@ public class BookingFlightTest {
      * Verify Depart Date value is 10/1/2025
      */
 
-    @Test
+    @Test (groups = {"wip"})
     void verifyAbleSelectDepartDate1(){
     WebDriver driver = new ChromeDriver();
     driver.get("https://www.vietnamairlines.com/vn/en/home");
@@ -29,7 +29,7 @@ public class BookingFlightTest {
 
     Assert.assertTrue(Boolean.parseBoolean(String.valueOf(driver.findElement(By.xpath("//*[@id=\"roundtrip-date-depart\"]")).getText().contains("10/01/2025"))));
     }
-    @Test
+    @Test (groups = {"wip"})
     void verifyAbleSelectDepartDate2(){
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();

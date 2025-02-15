@@ -14,11 +14,17 @@
             <class name="internet.DropDownTest"/>
             <class name="internet.HoverTest"/>
             <class name="internet.HyperLinkTest"/>
-            <class name="internet.JavaScriptAlert"/>
+            <class name="internet.JavaScriptAlertTest"/>
             <class name="internet.NestedFrameTest"/>
-            <class name="internet.DropDownTest"/>
+            <class name="internet.DragDropTest"/>
             <class name="internet.DueTableTest"/>
             <class name="internet.RightClickTest"/>
+            <class name="internet.BasicAuthenticationTest"/>
+            <class name="internet.BookingFlightTest"/>
+            <class name="internet.ScrollDownTest"/>
+            <class name="internet.HorizontalSliderTest"/>
+            <class name="internet.KeyActionsTest"/>
+            <class name="internet.SwagLabsTest"/>
         </classes>
     </test>
 </suite>
