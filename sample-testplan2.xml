@@ -4,6 +4,16 @@
               <parameter name = "url" value="https://the-internet.herokuapp.com/broken_images"/>
        <classes>
               <class name="internet.BrokenImagesTest"/>
+              <class name="internet.CheckboxTest"/>
+              <class name="internet.FormAuthenticationTest"/>
+              <class name="internet.WebTableTestB"/>
+              <class name="internet.DropDownTest"/>
+              <class name="internet.HoverTest"/>
+              <class name="internet.HyperLink"/>
+              <class name="internet.JavaScriptAlert"/>
+              <class name="internet.NestedFrameTest"/>
+              <class name="internet.DropDownTest"/>
+              <class name="internet.DueTableTest"/>
        </classes>
        </test>
 </suite>
