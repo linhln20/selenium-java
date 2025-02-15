@@ -9,21 +9,21 @@ import org.testng.annotations.*;
 import supports.Browser;
 
 public class DropDownTest {
+    DropDownPage dropDownPage;
     @BeforeMethod
     public void setUp(){
         Browser.openBrowser("chrome");
+        dropDownPage = new DropDownPage();
+        dropDownPage.open();
     }
 
     @Test
     void ableToSelectSingleOption() {
-        DropDownPage dropDownPage = new DropDownPage();
-        dropDownPage.open();
-
         dropDownPage.select("1");
         Assert.assertTrue(DropDownPage.isOptionSelected("1"));
     }
 
-    @Test(groups = {"wip"})
+    @Test
     void ableSelectMultipleOptions(){
         FruitsPage fruitsPage = new FruitsPage();
         fruitsPage.open();

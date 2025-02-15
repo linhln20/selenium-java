@@ -18,6 +18,7 @@
             <class name="internet.NestedFrameTest"/>
             <class name="internet.DropDownTest"/>
             <class name="internet.DueTableTest"/>
+            <class name="internet.RightClickTest"/>
         </classes>
     </test>
 </suite>

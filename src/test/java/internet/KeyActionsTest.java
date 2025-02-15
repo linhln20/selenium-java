@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import supports.Browser;
 
 public class KeyActionsTest {
-    @Test //done
+    @Test
     void keyPress(){
         Browser.openBrowser("chrome");
         KeyPressPage keyPressPage = new KeyPressPage();
@@ -24,7 +24,7 @@ public class KeyActionsTest {
         Browser.quit();
     }
 
-    @Test //done
+    @Test
     void dynamicLoading() throws InterruptedException {
         Browser.openBrowser("chrome");
         DynamicLoadingPage dynamicLoadingPage = new DynamicLoadingPage();
@@ -40,7 +40,7 @@ public class KeyActionsTest {
         Browser.quit();
     }
 
-    @Test //done
+    @Test
     void dynamicLoadingB() {
         Browser.openBrowser("chrome");
         DynamicLoadingPage dynamicLoadingPage = new DynamicLoadingPage();
@@ -52,7 +52,7 @@ public class KeyActionsTest {
         Browser.quit();
     }
 
-    @Test //done
+    @Test
     void captureScreenShot(){
         Browser.openBrowser("chrome");
         CaptureScreenShotPage captureScreenShotPage = new CaptureScreenShotPage();
