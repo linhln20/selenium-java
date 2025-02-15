@@ -23,7 +23,7 @@ public class DropDownTest {
         Assert.assertTrue(DropDownPage.isOptionSelected("1"));
     }
 
-    @Test
+    @Test(groups = {"wip"})
     void ableSelectMultipleOptions(){
         FruitsPage fruitsPage = new FruitsPage();
         fruitsPage.open();
