@@ -5,7 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import supports.Browser;
 
-public class horizontalSlider {
+public class HorizontalSliderTest {
     @Test
     void horizontalSlider() throws InterruptedException {
         Browser.openBrowser("chrome");

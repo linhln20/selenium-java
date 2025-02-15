@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
-public class rightClick {
+public class RightClickTest {
     @Test
     void rightClick(){
         WebDriver driver = new ChromeDriver();

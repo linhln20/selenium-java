@@ -5,7 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import supports.Browser;
 
-public class dragDropElements {
+public class DragDropTest {
     @Test
     void dragDropElements(){ //done
         Browser.openBrowser("chrome");

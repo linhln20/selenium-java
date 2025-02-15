@@ -22,7 +22,7 @@ public class BrokenImagesTest { //chay bang file xml
     void setup(String browser, String url){
         openBrowser(browser);
         brokenImagesPage = new BrokenImagesPage();
-        brokenImagesPage.open(url);
+        brokenImagesPage.open(url+"/broken_images");
     }
 
     @Test (dataProvider ="verifyBrokenImage")

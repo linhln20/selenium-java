@@ -18,7 +18,7 @@ public class Browser {
     public static WebDriverWait wait;
 
     public static void openBrowser(String browser){
-        switch (browser){
+        switch (browser.toLowerCase()){
             case "chrome":{
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("--headless=new");

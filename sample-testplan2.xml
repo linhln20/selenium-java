@@ -6,7 +6,6 @@
             <class name="internet.BrokenImagesTest"/>
             <class name="internet.CheckboxTest"/>
             <class name="internet.FormAuthenticationTest"/>
-            <class name="internet.WebTableTestB"/>
             <class name="internet.DropDownTest"/>
             <class name="internet.HoverTest"/>
             <class name="internet.HyperLink"/>
