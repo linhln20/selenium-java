@@ -12,7 +12,7 @@ public class HyperLinkTest {
     @BeforeMethod
     void setUp() {
         Browser.openBrowser("chrome");
-        HyperLinkpage hyperlinkpage = new HyperLinkpage();
+        hyperlinkpage = new HyperLinkpage();
         hyperlinkpage.open();
     }
     @Test

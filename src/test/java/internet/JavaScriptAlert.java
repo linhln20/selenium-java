@@ -34,7 +34,7 @@ public class JavaScriptAlert {
     @Test
     void ableAcceptJSConfirm() {
         Browser.openBrowser("chrome");
-        JavaScriptAlertPage javaScriptAlertPage = new JavaScriptAlertPage();
+        javaScriptAlertPage = new JavaScriptAlertPage();
         javaScriptAlertPage.open();
 
         javaScriptAlertPage.clickAlertBtn("Confirm");
@@ -45,7 +45,7 @@ public class JavaScriptAlert {
     @Test
     void ableSendKeysInJSPrompt() {
         Browser.openBrowser("chrome");
-        JavaScriptAlertPage javaScriptAlertPage = new JavaScriptAlertPage();
+        javaScriptAlertPage = new JavaScriptAlertPage();
         javaScriptAlertPage.open();
         javaScriptAlertPage.clickAlertBtn("Prompt");
 
