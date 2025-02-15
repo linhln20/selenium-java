@@ -1,0 +1,26 @@
+<suite name="Sample" parallel="tests" thread-count="3">
+       <test name="Demo">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="url" value="https://the-internet.herokuapp.com"/>
+        <classes>
+            <class name="internet.FormAuthenticationTest"/>
+        </classes>
+    </test>
+    <test name="Edge">
+        <parameter name="browser" value="edge"/>
+        <parameter name="url" value="https://the-internet.herokuapp.com"/>
+        <classes>
+            <class name="internet.FormAuthenticationTest"/>
+        </classes>
+    </test>
+
+    <test name="Firefox">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="url" value="https://the-internet.herokuapp.com"/>
+        <classes>
+            <class name="internet.FormAuthenticationTest"/>
+        </classes>
+    </test>
+
+
+</suite>
