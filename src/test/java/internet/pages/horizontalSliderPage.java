@@ -8,7 +8,7 @@ import supports.Browser;
 
 import static supports.Browser.visit;
 
-public class horizontalSliderPage {
+public class HorizontalSliderPage {
     public void open(){
         visit("https://the-internet.herokuapp.com/horizontal_slider");
     }

@@ -1,6 +1,6 @@
 package internet;
 
-import internet.pages.horizontalSliderPage;
+import internet.pages.HorizontalSliderPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import supports.Browser;
@@ -9,7 +9,7 @@ public class HorizontalSliderTest {
     @Test
     void horizontalSlider() throws InterruptedException {
         Browser.openBrowser("chrome");
-        horizontalSliderPage horizontalSliderPage = new horizontalSliderPage();
+        HorizontalSliderPage horizontalSliderPage = new HorizontalSliderPage();
         horizontalSliderPage.open();
 
         horizontalSliderPage.getPointer();

@@ -1,6 +1,6 @@
 package internet;
 
-import internet.pages.dragDropElementsPage;
+import internet.pages.DragDropElementsPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import supports.Browser;
@@ -9,7 +9,7 @@ public class DragDropTest {
     @Test
     void dragDropElements(){ //done
         Browser.openBrowser("chrome");
-        dragDropElementsPage dragDropElementsPage = new dragDropElementsPage();
+        DragDropElementsPage dragDropElementsPage = new DragDropElementsPage();
         dragDropElementsPage.open();
 
         dragDropElementsPage.dragDrop();

@@ -7,7 +7,7 @@ import supports.Browser;
 
 import static supports.Browser.visit;
 
-public class dragDropElementsPage {
+public class DragDropElementsPage {
     public void open(){
         visit("https://the-internet.herokuapp.com/drag_and_drop");
     }
