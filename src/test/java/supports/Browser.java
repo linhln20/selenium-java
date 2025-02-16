@@ -25,6 +25,10 @@ public class Browser {
                 driver = new ChromeDriver(chromeOptions);
                 break;
             }
+            case "chrome-non-headless":{
+                driver = new ChromeDriver();
+                break;
+            }
             case "firefox":{
                 driver = new FirefoxDriver();
                 break;

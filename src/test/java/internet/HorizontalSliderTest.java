@@ -11,14 +11,12 @@ public class HorizontalSliderTest {
     HorizontalSliderPage horizontalSliderPage;
     @BeforeMethod
     void setUp() {
-        Browser.openBrowser("chrome");
+        Browser.openBrowser("chrome-non-headless");
         horizontalSliderPage = new HorizontalSliderPage();
         horizontalSliderPage.open();
     }
     @Test
     void horizontalSlider() throws InterruptedException {
-
-
         horizontalSliderPage.getPointer();
         horizontalSliderPage.waitDuration();
         Assert.assertTrue(horizontalSliderPage.isSliderSetToValue());
