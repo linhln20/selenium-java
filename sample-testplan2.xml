@@ -4,7 +4,7 @@
             <exclude name="wip"/>
         </run>
     </groups>
-    <test name="Chrome Browser">
+    <test name="Chrome Browser headless">
         <parameter name="browser" value="chrome"/>
         <parameter name="url" value="https://the-internet.herokuapp.com"/>
         <classes>
@@ -22,9 +22,16 @@
             <class name="internet.BasicAuthenticationTest"/>
             <class name="internet.BookingFlightTest"/>
             <class name="internet.ScrollDownTest"/>
-            <class name="internet.HorizontalSliderTest"/>
             <class name="internet.KeyActionsTest"/>
             <class name="internet.SwagLabsTest"/>
         </classes>
     </test>
+    <test name="Chrome Browser">
+        <parameter name="browser" value="chrome-non-headless"/>
+        <parameter name="url" value="https://the-internet.herokuapp.com"/>
+        <classes>
+            <class name="internet.HorizontalSliderTest"/>
+        </classes>
+    </test>
+
 </suite>
