@@ -8,21 +8,21 @@
         <parameter name="browser" value="chrome"/>
         <parameter name="url" value="https://the-internet.herokuapp.com"/>
         <classes>
-            <class name="internet.BrokenImagesTest"/>
-            <class name="internet.CheckboxTest"/>
-            <class name="internet.FormAuthenticationTest"/>
-            <class name="internet.DropDownTest"/>
-            <class name="internet.HoverTest"/>
-            <class name="internet.HyperLinkTest"/>
-            <class name="internet.JavaScriptAlertTest"/>
-            <class name="internet.NestedFrameTest"/>
-            <class name="internet.DragDropTest"/>
-            <class name="internet.DueTableTest"/>
-            <class name="internet.RightClickTest"/>
-            <class name="internet.BasicAuthenticationTest"/>
-            <class name="internet.BookingFlightTest"/>
-            <class name="internet.ScrollDownTest"/>
-            <class name="internet.KeyActionsTest"/>
+<!--            <class name="internet.BrokenImagesTest"/>-->
+<!--            <class name="internet.CheckboxTest"/>-->
+<!--            <class name="internet.FormAuthenticationTest"/>-->
+<!--            <class name="internet.DropDownTest"/>-->
+<!--            <class name="internet.HoverTest"/>-->
+<!--            <class name="internet.HyperLinkTest"/>-->
+<!--            <class name="internet.JavaScriptAlertTest"/>-->
+<!--            <class name="internet.NestedFrameTest"/>-->
+<!--            <class name="internet.DragDropTest"/>-->
+<!--            <class name="internet.DueTableTest"/>-->
+<!--            <class name="internet.RightClickTest"/>-->
+<!--            <class name="internet.BasicAuthenticationTest"/>-->
+<!--            <class name="internet.BookingFlightTest"/>-->
+<!--            <class name="internet.ScrollDownTest"/>-->
+<!--            <class name="internet.KeyActionsTest"/>-->
             <class name="internet.SwagLabsTest"/>
         </classes>
     </test>
