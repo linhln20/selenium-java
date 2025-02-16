@@ -12,7 +12,7 @@ public class TodoMVCTest {
 
     @BeforeMethod
     void setUp(){
-        Browser.openBrowser("edge");
+        Browser.openBrowser("chrome");
         todoMVCPage = new TodoMVCPage();
         todoMVCPage.open();
 //        Browser.maximize();
