@@ -27,7 +27,7 @@
 <!--        </classes>-->
 <!--    </test>-->
     <test name="Chrome Browser">
-        <parameter name="browser" value="firefox"/>
+        <parameter name="browser" value="edge"/>
         <parameter name="url" value="https://the-internet.herokuapp.com"/>
         <classes>
             <class name="internet.HorizontalSliderTest"/>

@@ -28,10 +28,9 @@ public class HorizontalSliderPage {
         } catch (AWTException e) {
             throw new RuntimeException("Failed to create Robot instance", e);
         }
-        int x = width+200;
-        int y = 100;
+        int x = 0;
+        int y = width+100;
         robot.mouseMove(x, y);
-        robot.mouseMove(x+10, y+9);
     }
 
     public static void waitDuration() {

@@ -11,7 +11,7 @@ public class HorizontalSliderTest {
     HorizontalSliderPage horizontalSliderPage;
     @BeforeMethod
     void setUp() {
-        Browser.openBrowser("firefox");
+        Browser.openBrowser("edge");
         horizontalSliderPage = new HorizontalSliderPage();
         horizontalSliderPage.open();
     }
