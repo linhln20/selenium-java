@@ -11,7 +11,7 @@ public class HorizontalSliderTest {
     HorizontalSliderPage horizontalSliderPage;
     @BeforeMethod
     void setUp() {
-        Browser.openBrowser("chrome-non-headless");
+        Browser.openBrowser("firefox");
         horizontalSliderPage = new HorizontalSliderPage();
         horizontalSliderPage.open();
     }

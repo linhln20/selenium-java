@@ -31,7 +31,7 @@ public class HorizontalSliderPage {
         int x = width+200;
         int y = 100;
         robot.mouseMove(x, y);
-        robot.mouseMove(x+10, y+9); 
+        robot.mouseMove(x+10, y+9);
     }
 
     public static void waitDuration() {

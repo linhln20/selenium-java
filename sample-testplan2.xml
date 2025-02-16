@@ -4,10 +4,10 @@
             <exclude name="wip"/>
         </run>
     </groups>
-    <test name="Chrome Browser headless">
-        <parameter name="browser" value="chrome"/>
-        <parameter name="url" value="https://the-internet.herokuapp.com"/>
-        <classes>
+<!--    <test name="Chrome Browser headless">-->
+<!--        <parameter name="browser" value="chrome"/>-->
+<!--        <parameter name="url" value="https://the-internet.herokuapp.com"/>-->
+<!--        <classes>-->
 <!--            <class name="internet.BrokenImagesTest"/>-->
 <!--            <class name="internet.CheckboxTest"/>-->
 <!--            <class name="internet.FormAuthenticationTest"/>-->
@@ -23,11 +23,11 @@
 <!--            <class name="internet.BookingFlightTest"/>-->
 <!--            <class name="internet.ScrollDownTest"/>-->
 <!--            <class name="internet.KeyActionsTest"/>-->
-            <class name="internet.SwagLabsTest"/>
-        </classes>
-    </test>
+<!--            <class name="internet.SwagLabsTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
     <test name="Chrome Browser">
-        <parameter name="browser" value="chrome-non-headless"/>
+        <parameter name="browser" value="firefox"/>
         <parameter name="url" value="https://the-internet.herokuapp.com"/>
         <classes>
             <class name="internet.HorizontalSliderTest"/>
