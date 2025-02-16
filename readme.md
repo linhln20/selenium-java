@@ -25,7 +25,7 @@ mvn clean test
 - [Horizontal slider](src/test/java/internet/HorizontalSliderTest.java)
   - It does not work on Git because the function moves the mouse target is disabled (the target only changes to "5" if the mouse is moved after slid)
 - [Able Select Multiple Options](src/test/java/internet/DropDownTest.java)
-  - Can not double-select to deselect, just press the key "Ctrl" and select at the same moment
+  - Can not double-click to deselect, just press the key "Ctrl" and select at the same moment
 
 ## Supports
 -  Selenium Owner methods
