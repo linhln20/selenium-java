@@ -15,7 +15,7 @@ public class TodoMVCTest {
         Browser.openBrowser("chrome");
         todoMVCPage = new TodoMVCPage();
         todoMVCPage.open();
-//        Browser.maximize();
+        Browser.maximize();
     }
 
     @Test
