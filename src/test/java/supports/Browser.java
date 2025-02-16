@@ -64,6 +64,11 @@ public class Browser {
         wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
 //        driver.findElement(locator).click();
     }
+
+    public static void clickCheckBox(By locator){
+        driver.findElement(locator).click();
+    }
+
     public static void clickBtn(By locator){
         driver.findElement(locator).click();
     }
@@ -109,6 +114,9 @@ public class Browser {
     public static void fill(By locator, CharSequence... withText){
         driver.findElement(locator).sendKeys(withText);
     }
+     public static void pressEnter(By locator){
+        driver.findElement(locator).sendKeys(Keys.ENTER);
+     }
 
     public static String getText(By locator){
         return driver.findElement(locator).getText();
@@ -144,6 +152,9 @@ public class Browser {
     driver.findElement(locator).sendKeys(text);
     }
 
+    public static void maximize(){
+        driver.manage().window().maximize();
+    }
     public static void quit(){
         driver.quit();
     }

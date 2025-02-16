@@ -24,6 +24,7 @@
             <class name="internet.ScrollDownTest"/>
             <class name="internet.KeyActionsTest"/>
             <class name="internet.SwagLabsTest"/>
+            <class name="internet.TodoMVCTest"/>
         </classes>
     </test>
     <test name="Edge Browser">

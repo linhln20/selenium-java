@@ -6,10 +6,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-
 public class BookingFlightTest {
     /**
      * Open Chrome
@@ -21,6 +17,7 @@ public class BookingFlightTest {
     @Test (groups = {"wip"})
     void verifyAbleSelectDepartDate1(){
     WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
     driver.get("https://www.vietnamairlines.com/vn/en/home");
     driver.findElement(By.xpath("//*[@id=\"city-to-roundtrip\"]")).click();
     driver.findElement(By.linkText("Tp. Hồ Chí Minh (SGN), Việt Nam")).click();
