@@ -22,8 +22,5 @@ public class FormAuthenticationPage {
     public String getMessage(String expectedMessageType){
         return getText(By.className(expectedMessageType));
         }
-    public boolean isMessageContains(String messageType, String content){
-        return getMessage(messageType).contains(content);
     }
-}
 

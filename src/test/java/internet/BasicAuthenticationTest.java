@@ -1,42 +1,35 @@
 package internet;
 
 import internet.pages.BasicAuthenticationPage;
-
-import static supports.Browser.visit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.*;
-
-import static supports.Browser.*;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+import supports.Browser;
 
 public class BasicAuthenticationTest {
     BasicAuthenticationPage basicAuthenticationPage;
     @DataProvider
-    Object[][] testLogin(){
+    public Object[][] loginMessage(){
         return new Object[][]{
-                {"Congratulations! You must have the proper credentials","//div[@id='content']//p"},
+            {"Congratulations! You must have the proper credentials.", "//div[@id='content']//p"}
         };
     }
-
-    @Parameters({"browser","url"})
     @BeforeMethod
-    void setup(String browser,String url){
-            openBrowser(browser);
-            basicAuthenticationPage = new BasicAuthenticationPage();
-            visit(url);
+    void setUp() {
+        Browser.openBrowser("chrome");
+        basicAuthenticationPage = new BasicAuthenticationPage();
+        basicAuthenticationPage.open();
     }
 
-    @Test (dataProvider ="testLogin")
-     void loginSuccess(String ExpectedMessageContent, String ExpectedMessage){
+    @Test (dataProvider = "loginMessage")
+    void loginSuccess(String expectedMessageContent, String expectedMessageType ){
         Assert.assertTrue(basicAuthenticationPage
-            .getMessage(ExpectedMessage)
-            .contains(ExpectedMessageContent));
-    }
+                .getMessage(expectedMessageType)
+                        .contains(expectedMessageContent));
+                }
 
-    @AfterMethod
-        void tearDown(){
-        quit();
-    }
 }
