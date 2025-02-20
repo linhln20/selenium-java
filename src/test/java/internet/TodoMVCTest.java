@@ -9,21 +9,21 @@ import supports.Browser;
 
 public class TodoMVCTest {
     TodoMVCPage todoMVCPage;
-    String taskName = String.format("task %s", RandomText.randomString(2));
+    String taskName = String.format("task %s", RandomText.randomString(1));
 
     @BeforeMethod
     void setUp() {
         Browser.openBrowser("chrome");
         todoMVCPage = new TodoMVCPage();
         todoMVCPage.open();
-        Browser.maximize();
     }
 
     @Test
     void createNewTodo() {
         todoMVCPage.fill(taskName);
 
-        Assert.assertEquals(todoMVCPage.getTodoName(), taskName);
+        Assert.assertEquals(todoMVCPage.getTodoName(taskName), taskName);
+        Assert.assertTrue(todoMVCPage.isTaskExit(taskName));
     }
 
     @Test
@@ -34,16 +34,16 @@ public class TodoMVCTest {
         Assert.assertTrue(todoMVCPage.isCompleted());
     }
 
-    @Test(groups = {"wip"})
+    @Test
     void verifyUserAbleDeleteATodo() {
         todoMVCPage.fill(taskName);
 
         todoMVCPage.deleteTodo();
-        Assert.assertNotEquals(todoMVCPage.getTodoName(), taskName);
+        Assert.assertFalse(todoMVCPage.isTaskExit(taskName));
     }
 
     @AfterMethod
-    void tearDown(){
+    void tearDown() {
         Browser.quit();
     }
 }

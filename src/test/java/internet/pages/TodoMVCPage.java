@@ -1,12 +1,10 @@
 package internet.pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import supports.Browser;
 
-import java.awt.*;
+import java.util.List;
 
 import static supports.Browser.visit;
 
@@ -15,44 +13,38 @@ public class TodoMVCPage {
         visit("https://todomvc.com/examples/react/dist/");
     }
 
-    public void fill(String todoName){
-        Browser.clickCheckBox(By.id("todo-input"));
-        Browser.fill(By.id("todo-input"), todoName+"\n");
+    public void fill(String todoName) {
+        Browser.fill(By.className("new-todo"), todoName);
+        Browser.pressEnter(By.className("new-todo"));
     }
 
-    public String getTodoName(){
-         return Browser.getText(By.xpath("//*[@data-testid='todo-item-label']"));
+    public boolean isTaskExit(String taskName){
+        List<WebElement> taskList = Browser.getList(By.cssSelector(".todo-list li"));
+        return taskList.stream().anyMatch(task -> task.getText().contains(taskName));
+    }
+
+    public String getTodoName(String taskName) {
+        List<WebElement> taskList = Browser.getList(By.cssSelector(".todo-list li label"));
+        for (WebElement task : taskList) {
+            if (task.getText().trim().equals(taskName)) {
+                return task.getText().trim();
+            }
+        }
+        return null;
     }
 
     public void markAsCompleted(){
-        Browser.clickCheckBox(By.xpath("//input[@data-testid='todo-item-toggle']"));
+        Browser.clickCheckBox(By.cssSelector(".todo-list li .toggle"));
     }
 
     public boolean isCompleted(){
-        return Browser.isSelected(By.xpath("//input[@data-testid='todo-item-toggle']"));
+        return Browser.isSelected(By.cssSelector(".todo-list li.completed .toggle"));
     }
 
-    public void moveMouse(){
-        WebElement pointer = Browser.getElement(By.xpath("//label[@data-testid='todo-item-label']"));
-        Robot robot;
-        try {
-            robot = new Robot();
-        } catch (AWTException e) {
-            throw new RuntimeException("Failed to create Robot instance", e);
-        }
-        int x = pointer.getLocation().getX();
-        int y = pointer.getLocation().getY();
-        System.out.println(x+" "+y);
-        robot.mouseMove(x, y);
-    }
     public void deleteTodo(){
-        WebElement element = Browser.getElement(By.xpath("//label[@data-testid='todo-item-label']"));
+        WebElement element = Browser.getElement(By.cssSelector(".todo-list li"));
             Browser.hover(element);
-        Browser.clickBtn(By.xpath("//button[@data-testid='todo-item-button']"));
+        Browser.clickBtn(By.cssSelector(".todo-list li .destroy"));
         }
     }
-
-//    public boolean isTodoDeleted(){
-//        return Browser.getText(By.xpath("//*[@data-testid='todo-item-label']"));
-//    }
 
