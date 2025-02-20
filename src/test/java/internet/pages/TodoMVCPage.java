@@ -1,6 +1,7 @@
 package internet.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import supports.Browser;
@@ -14,13 +15,9 @@ public class TodoMVCPage {
         visit("https://todomvc.com/examples/react/dist/");
     }
 
-    public void click(By locator){
-        Browser.clickCheckBox(locator);
-    }
-
-    public void type(By locator, String todoName){
-        Browser.sentText(locator, todoName);
-        Browser.pressEnter(locator);
+    public void fill(String todoName){
+        Browser.clickCheckBox(By.id("todo-input"));
+        Browser.fill(By.id("todo-input"), todoName+"\n");
     }
 
     public String getTodoName(){
@@ -49,10 +46,13 @@ public class TodoMVCPage {
         robot.mouseMove(x, y);
     }
     public void deleteTodo(){
+        WebElement element = Browser.getElement(By.xpath("//label[@data-testid='todo-item-label']"));
+            Browser.hover(element);
         Browser.clickBtn(By.xpath("//button[@data-testid='todo-item-button']"));
+        }
     }
 
 //    public boolean isTodoDeleted(){
 //        return Browser.getText(By.xpath("//*[@data-testid='todo-item-label']"));
 //    }
-}
+

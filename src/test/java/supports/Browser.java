@@ -7,12 +7,14 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.List;
 
 public class Browser {
     private static WebDriver driver;
@@ -48,6 +50,10 @@ public class Browser {
         wait = new WebDriverWait(driver, Duration.ofSeconds(1));
     }
 
+    public static List<WebElement> all(By locator) {
+        return driver.findElements(locator);
+    }
+
     public static void initializeWait(int timeout){
         wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
     }
@@ -63,6 +69,11 @@ public class Browser {
     public static void click(By locator){
         wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
 //        driver.findElement(locator).click();
+    }
+
+    public static void doubleClick(WebElement webElement) {
+        Actions actions = new Actions(driver);
+        actions.doubleClick(webElement).perform();
     }
 
     public static void clickCheckBox(By locator){
@@ -111,15 +122,27 @@ public class Browser {
         return driver.getCurrentUrl();
     }
 
-    public static void fill(By locator, CharSequence... withText){
-        driver.findElement(locator).sendKeys(withText);
+    public static void fill(By locator, String text) {
+        WebElement element = driver.findElement(locator);
+        element.clear();
+        element.sendKeys(text);
     }
+
+    public static void hover(WebElement element) {
+        new Actions(driver).moveToElement(element).perform();
+    }
+
      public static void pressEnter(By locator){
         driver.findElement(locator).sendKeys(Keys.ENTER);
      }
 
     public static String getText(By locator){
         return driver.findElement(locator).getText();
+    }
+
+    public static void executeScript(WebElement element, String script) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript(script, element);
     }
 
     public static int[] getImageProperty(By locator){
@@ -155,6 +178,7 @@ public class Browser {
     public static void maximize(){
         driver.manage().window().maximize();
     }
+
     public static void quit(){
         driver.quit();
     }
