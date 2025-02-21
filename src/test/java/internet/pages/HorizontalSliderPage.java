@@ -22,6 +22,7 @@ public class HorizontalSliderPage {
         WebElement pointer = Browser.getElement(By.xpath("//div[@class='sliderContainer']/input"));
         int width = pointer.getSize().getWidth();
         actions.clickAndHold(pointer).moveByOffset(width, 0).perform();
+        Browser.initializeWait(40);
         Robot robot;
         try {
             robot = new Robot();

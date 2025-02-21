@@ -21,7 +21,6 @@ public class HorizontalSliderTest {
     @Test //(groups = {"wip"})
     void horizontalSlider() throws InterruptedException {
         horizontalSliderPage.getPointer();
-        horizontalSliderPage.waitDuration();
 
         Assert.assertTrue(horizontalSliderPage.isSliderSetToValue());
     }
