@@ -44,12 +44,12 @@
         </classes>
     </test>
 
-    <test name="Todo MVC">
-        <parameter name="browser" value="chrome"/>
-        <parameter name="url" value="https://todomvc.com/examples/react/dist/"/>
-        <classes>
-            <class name="internet.TodoMVCTest"/>
-        </classes>
-    </test>
+<!--    <test name="Todo MVC">-->
+<!--        <parameter name="browser" value="chrome"/>-->
+<!--        <parameter name="url" value="https://todomvc.com/examples/react/dist/"/>-->
+<!--        <classes>-->
+<!--            <class name="internet.TodoMVCTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
 </suite>

@@ -115,6 +115,12 @@ public class Browser {
         element.sendKeys(String.valueOf(text));
     }
 
+    public static void fillDouble(By locator, double text) {
+        WebElement element = driver.findElement(locator);
+        element.clear();
+        element.sendKeys(String.valueOf(text));
+    }
+
     public static WebDriver getDriver() {
         return driver;
     }

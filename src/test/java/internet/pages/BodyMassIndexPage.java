@@ -6,8 +6,8 @@ import supports.Browser;
 import static supports.Browser.visit;
 
 public class BodyMassIndexPage {
-    public void open(String url){
-        visit(url);
+    public void open(){
+        visit("https://www.calculator.net/bmi-calculator.html");
     }
 
     public void selectMetricUnit(){ //    Select metric unit tab
@@ -28,12 +28,12 @@ public class BodyMassIndexPage {
         }
     }
 
-    public void fillWeight(int weight){
-        Browser.fillInt(By.id("ckg"), weight);
+    public void fillWeight(double weight){
+        Browser.fillDouble(By.id("ckg"), weight);
     }
 
-    public void fillHeight(int height){
-        Browser.fillInt(By.id("cheightmeter"), height);
+    public void fillHeight(double height){
+        Browser.fillDouble(By.id("cheightmeter"), height);
     }
 
     public void clickCalculateBtn(){

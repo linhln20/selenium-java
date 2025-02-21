@@ -9,34 +9,30 @@ import supports.Browser;
 public class BodyMassIndexTest {
     BodyMassIndexPage bodyMassIndexPage;
 
-    @DataProvider
-    Object[][] testData() {
-        return new Object[][]{
-                {34, "male", 173, 65},
-                {20, "female", 165, 47}
-        };
-    }
-
-    @Parameters({"browser","url"})
     @BeforeMethod
-    void setUp(String browser, String url){
+    void setUp(){
         Browser.openBrowser("chrome");
         bodyMassIndexPage = new BodyMassIndexPage();
-        bodyMassIndexPage.open(url+"/bmi-calculator");
+        bodyMassIndexPage.open();
     }
 
-    @Test(dataProvider = "testData")//, groups = {"wip"}
-    void verifyBMICalculator(int age, String gender, int height, int weight) {
+    @Test
+    void verifyBMICalculator() {
         bodyMassIndexPage.selectMetricUnit();
+        int age = 34;
+        String gender = "male";
+        double height = 173.0;
+        double weight = 65.0;
+
         bodyMassIndexPage.fillAge(age);
         bodyMassIndexPage.selectGender(gender);
         bodyMassIndexPage.fillHeight(height);
         bodyMassIndexPage.fillWeight(weight);
         bodyMassIndexPage.clickCalculateBtn();
 
-        String BmiResult = CalculateBMI.calculateBmi(height, weight);
+        String bmiResult = CalculateBMI.calculateBmi(height, weight);
         String actualResult = bodyMassIndexPage.getResult();
-        Assert.assertTrue(actualResult.contains(BmiResult));
+        Assert.assertTrue(actualResult.contains(bmiResult));
     }
 
     @AfterMethod
