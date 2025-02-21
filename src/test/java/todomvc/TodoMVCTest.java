@@ -1,6 +1,6 @@
-package internet;
+package todomvc;
 
-import internet.pages.TodoMVCPage;
+import todomvc.page.TodoMVCPage;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;

@@ -1,6 +1,6 @@
-package internet;
+package bmi;
 
-import internet.pages.BodyMassIndexPage;
+import bmi.page.BodyMassIndexPage;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.*;

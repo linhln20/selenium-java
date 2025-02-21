@@ -1,4 +1,4 @@
-package internet;
+package bmi;
 
 public class CalculateBMI {
 

@@ -1,11 +1,11 @@
-<suite name="Sample">
+<suite name="Internet">
     <groups>
         <run>
             <exclude name="wip"/>
         </run>
     </groups>
 <!--    <test name="Chrome Browser headless">-->
-<!--        <parameter name="browser" value="chrome"/>-->
+<!--        <parameter name="browser" value="chrome-headless"/>-->
 <!--        <parameter name="url" value="https://the-internet.herokuapp.com"/>-->
 <!--        <classes>-->
 <!--            <class name="internet.BrokenImagesTest"/>-->
@@ -40,16 +40,10 @@
         <parameter name="browser" value="chrome"/>
         <parameter name="url" value="https://www.calculator.net"/>
         <classes>
-            <class name="internet.BodyMassIndexTest"/>
+            <class name="bmi.BodyMassIndexTest"/>
         </classes>
     </test>
 
-<!--    <test name="Todo MVC">-->
-<!--        <parameter name="browser" value="chrome"/>-->
-<!--        <parameter name="url" value="https://todomvc.com/examples/react/dist/"/>-->
-<!--        <classes>-->
-<!--            <class name="internet.TodoMVCTest"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+
 
 </suite>

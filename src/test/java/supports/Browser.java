@@ -5,6 +5,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
@@ -23,13 +24,13 @@ public class Browser {
 
     public static void openBrowser(String browser){
         switch (browser.toLowerCase()){
-            case "chrome":{
+            case "chrome-headless":{
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("--headless=new");
                 driver = new ChromeDriver(chromeOptions);
                 break;
             }
-            case "chrome-non-headless":{
+            case "chrome":{
                 driver = new ChromeDriver();
                 break;
             }
@@ -44,6 +45,12 @@ public class Browser {
                 break;
             }
             case "edge":{
+                driver = new EdgeDriver();
+                break;
+            }
+            case "edge-headless":{
+                EdgeOptions edgeOptions = new EdgeOptions();
+                edgeOptions.addArguments("--headless");
                 driver = new EdgeDriver();
                 break;
             }

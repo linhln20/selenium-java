@@ -1,4 +1,4 @@
-package internet.pages;
+package todomvc.page;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

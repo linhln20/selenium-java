@@ -1,4 +1,4 @@
-package internet;
+package todomvc;
 
 import java.security.SecureRandom;
 

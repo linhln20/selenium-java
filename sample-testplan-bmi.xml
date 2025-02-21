@@ -1,0 +1,11 @@
+<suite name="TodoMVC">
+    <test name="Todo MVC">
+        <parameter name="browser" value="chrome-headless"/>
+        <parameter name="url" value="https://todomvc.com/examples/react/dist/"/>
+        <classes>
+            <class name="todomvc.TodoMVCTest"/>
+        </classes>
+    </test>
+
+
+</suite>

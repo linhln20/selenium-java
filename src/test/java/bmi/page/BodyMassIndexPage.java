@@ -1,4 +1,4 @@
-package internet.pages;
+package bmi.page;
 
 import org.openqa.selenium.By;
 import supports.Browser;
