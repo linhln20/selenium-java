@@ -69,6 +69,28 @@ public class Browser {
     public static void back(){
         driver.navigate().back();}
 
+    public static void clearBrowserCache() {
+        WebDriver driver = Browser.getDriver();
+        if (driver == null) {
+            throw new IllegalStateException("WebDriver is not initialized.");
+        }
+
+        try {
+            driver.get("chrome://settings/clearBrowserData");
+            Thread.sleep(1000);
+
+            Actions actions = new Actions(driver);
+            actions.sendKeys(org.openqa.selenium.Keys.TAB).perform();
+            actions.sendKeys(org.openqa.selenium.Keys.TAB).perform();
+            actions.sendKeys(org.openqa.selenium.Keys.TAB).perform();
+            actions.sendKeys(org.openqa.selenium.Keys.ENTER).perform();
+
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException("Error while clearing cache", e);
+        }
+    }
+
     public static void click(By locator){
         wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
 //        driver.findElement(locator).click();

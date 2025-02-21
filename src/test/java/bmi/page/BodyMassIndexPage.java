@@ -16,6 +16,7 @@ public class BodyMassIndexPage {
     private By resultLabel = By.cssSelector(".rightresult .bigtext b");
 
     public void open(String url){
+        Browser.clearBrowserCache();
         visit(url);
     }
 
