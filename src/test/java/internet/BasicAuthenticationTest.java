@@ -19,7 +19,7 @@ public class BasicAuthenticationTest {
     @DataProvider
     public Object[][] loginMessage(){
         return new Object[][]{
-            {"Congratulations! You must have the proper credentials.", "//div[@id='content']//p"}
+            {"Congratulations! You must have the proper credentials."}
         };
     }
     @Parameters({"browser", "url"})
@@ -32,9 +32,10 @@ public class BasicAuthenticationTest {
     }
 
     @Test (dataProvider = "loginMessage")
-    void loginSuccess(String expectedMessageContent, String expectedMessageType ){
+    void loginSuccess(String expectedMessageContent){
+
         Assert.assertTrue(basicAuthenticationPage
-                .getMessage(expectedMessageType)
+                .getMessage()
                         .contains(expectedMessageContent));
                 }
 
