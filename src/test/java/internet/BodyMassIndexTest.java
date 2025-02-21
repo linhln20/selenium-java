@@ -25,11 +25,11 @@ public class BodyMassIndexTest {
         Browser.openBrowser("edge");
         bodyMassIndexPage = new BodyMassIndexPage();
         bodyMassIndexPage.open();
-        bodyMassIndexPage.selectMetricUnit();
     }
 
     @Test(dataProvider = "testData")
     void verifyBMICalculator(int age, String gender, int height, int weight) {
+        bodyMassIndexPage.selectMetricUnit();
         bodyMassIndexPage.fillAge(age);
         bodyMassIndexPage.selectGender(gender);
         bodyMassIndexPage.fillHeight(height);
