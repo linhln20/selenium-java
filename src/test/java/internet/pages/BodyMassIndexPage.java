@@ -6,41 +6,40 @@ import supports.Browser;
 import static supports.Browser.visit;
 
 public class BodyMassIndexPage {
-    public void open(){
-        visit("https://www.calculator.net/bmi-calculator.html");
+    private By metricTab = By.cssSelector("li#menuon a");
+        private By ageTextBox = By.cssSelector("input#cage");
+    private By maleRadioButton = By.cssSelector("td label.cbcontainer:first-child");
+    private By femaleRadioButton = By.cssSelector("td label.cbcontainer:last-child");
+    private By heightTextBox = By.cssSelector("input#cheightmeter");
+    private By weightTextBox = By.cssSelector("input#ckg");
+    private By calculateButton = By.xpath("//input[@type='submit' and @value='Calculate']");
+    private By resultLabel = By.cssSelector(".rightresult .bigtext b");
+
+    public void open(String url){
+        visit(url);
     }
 
     public void selectMetricUnit(){ //    Select metric unit tab
-        Browser.clickBtn(By.id("menuon"));
+        Browser.clickBtn(metricTab);
     }
 
-    public void fillAge(int age){
-        Browser.fillInt(By.id("cage"), age);
-    }
+    public void fillForm(int age, double height, double weight, String gender) {
+        Browser.fill(ageTextBox, String.valueOf(age));
 
-    public void selectGender(String gender) {
         if (gender.equalsIgnoreCase("male")) {
-            Browser.getElement(By.xpath("//label[@for='csex1']")).click(); // Chọn Male
-        } else if (gender.equalsIgnoreCase("female")) {
-            Browser.getElement(By.xpath("//label[@for='csex2']")).click(); // Chọn Female
+            Browser.clickBtn(maleRadioButton);
         } else {
-            throw new IllegalArgumentException("Giới tính không hợp lệ! Chỉ chấp nhận 'male' hoặc 'female'.");
+            Browser.clickBtn(femaleRadioButton);
         }
-    }
-
-    public void fillWeight(double weight){
-        Browser.fillDouble(By.id("ckg"), weight);
-    }
-
-    public void fillHeight(double height){
-        Browser.fillDouble(By.id("cheightmeter"), height);
+        Browser.fill(heightTextBox, String.valueOf(height));
+        Browser.fill(weightTextBox, String.valueOf(weight));
     }
 
     public void clickCalculateBtn(){
-        Browser.clickBtn(By.xpath("//input[@type='submit']"));
+        Browser.clickBtn(calculateButton);
     }
 
     public String getResult() {
-        return Browser.getText(By.cssSelector(".rightresult .bigtext b"));
+        return Browser.getText(resultLabel);
     }
 }

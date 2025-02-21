@@ -6,28 +6,31 @@ import org.testng.ITestResult;
 import org.testng.annotations.*;
 import supports.Browser;
 
+import static supports.Browser.openBrowser;
+import static supports.Browser.quit;
+
 public class BodyMassIndexTest {
     BodyMassIndexPage bodyMassIndexPage;
 
+    @DataProvider
+    Object[][] bmiTestData() {
+        return new Object[][]{
+                {34, 173, 65, "male"},
+                {20, 165, 47, "female"}
+        };
+    }
+    @Parameters({"browser", "url"})
     @BeforeMethod
-    void setUp(){
-        Browser.openBrowser("chrome");
+    void setUp(String browser, String url){
+        openBrowser(browser);
         bodyMassIndexPage = new BodyMassIndexPage();
-        bodyMassIndexPage.open();
+        bodyMassIndexPage.open(url+"/bmi-calculator");
     }
 
-    @Test
-    void verifyBMICalculator() {
+    @Test (dataProvider = "bmiTestData")
+    void verifyBMICalculator(int age, double height, double weight, String gender) {
         bodyMassIndexPage.selectMetricUnit();
-        int age = 34;
-        String gender = "male";
-        double height = 173.0;
-        double weight = 65.0;
-
-        bodyMassIndexPage.fillAge(age);
-        bodyMassIndexPage.selectGender(gender);
-        bodyMassIndexPage.fillHeight(height);
-        bodyMassIndexPage.fillWeight(weight);
+        bodyMassIndexPage.fillForm(age, height,weight,gender);
         bodyMassIndexPage.clickCalculateBtn();
 
         String bmiResult = CalculateBMI.calculateBmi(height, weight);
@@ -40,6 +43,6 @@ public class BodyMassIndexTest {
         if(testResult.isSuccess()){
             Browser.captureScreen(testResult.getName());
         }
-        Browser.quit();
+        quit();
     }
 }
