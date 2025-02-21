@@ -11,7 +11,7 @@ mvn clean test
 ```
 
 ## How to create test plan
-[Sample Test Plan](sample-testplan2.xml)
+[Sample Test Plan](sample-testplan-todomvc.xml)
 
 
 ## How to write a new test case with page object model
