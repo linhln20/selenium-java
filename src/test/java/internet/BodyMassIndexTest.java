@@ -22,7 +22,7 @@ public class BodyMassIndexTest {
 
     @BeforeMethod
     void setUp() {
-        Browser.openBrowser("firefox");
+        Browser.openBrowser("chrome");
         bodyMassIndexPage = new BodyMassIndexPage();
         bodyMassIndexPage.open();
     }
