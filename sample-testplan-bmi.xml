@@ -1,6 +1,11 @@
 <suite name="BMI">
+    <groups>
+        <run>
+            <exclude name="wip"/>
+        </run>
+    </groups>
     <test name="BMI test">
-        <parameter name="browser" value="chrome"/>
+        <parameter name="browser" value="chrome-headless"/>
         <parameter name="url" value="https://www.calculator.net"/>
         <classes>
             <class name="bmi.BodyMassIndexTest"/>
