@@ -53,7 +53,7 @@
                 <configuration>
                     <suiteXmlFiles>
                         <suiteXmlFile>sample-testplan-internet.xml</suiteXmlFile>
-<!--                        <suiteXmlFile>sample-testplan-bmi.xml</suiteXmlFile>-->
+<!--                        <suiteXmlFile>sample-testplan.xml</suiteXmlFile>-->
 <!--                        <suiteXmlFile>sample-testplan-todomvc.xml</suiteXmlFile>-->
                     </suiteXmlFiles>
                 </configuration>
