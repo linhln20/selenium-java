@@ -24,7 +24,7 @@ public class DynamicLoadingTest {
     }
 
     @Test
-    void dynamicLoading(String browser, String url) throws InterruptedException {
+    void dynamicLoading() throws InterruptedException {
         dynamicLoadingPage.click();
         dynamicLoadingPage.waitLoad();
 
@@ -33,7 +33,7 @@ public class DynamicLoadingTest {
     }
 
     @Test
-    void dynamicLoadingB(String browser, String url) {
+    void dynamicLoadingB() {
         dynamicLoadingPage.click();
         dynamicLoadingPage.waitLoadB();
 
