@@ -9,8 +9,8 @@ import java.util.List;
 import static supports.Browser.visit;
 
 public class TodoMVCPage {
-    public void open() {
-        visit("https://todomvc.com/examples/react/dist/");
+    public void open(String url) {
+        visit(url);
     }
 
     public void fill(String todoName) {

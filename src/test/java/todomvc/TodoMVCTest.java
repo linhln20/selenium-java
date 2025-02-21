@@ -1,5 +1,6 @@
 package todomvc;
 
+import org.testng.annotations.Parameters;
 import todomvc.page.TodoMVCPage;
 import org.testng.Assert;
 import org.testng.ITestResult;
@@ -8,15 +9,18 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import supports.Browser;
 
+import static supports.Browser.openBrowser;
+
 public class TodoMVCTest {
     TodoMVCPage todoMVCPage;
     String taskName = String.format("task %s", RandomText.randomString(1));
 
+    @Parameters({"browser", "url"})
     @BeforeMethod
-    void setUp() {
-        Browser.openBrowser("chrome");
+    void setUp(String browser, String url){
+        openBrowser(browser);
         todoMVCPage = new TodoMVCPage();
-        todoMVCPage.open();
+        todoMVCPage.open(url+"/examples/react/dist/");
     }
 
     @Test
