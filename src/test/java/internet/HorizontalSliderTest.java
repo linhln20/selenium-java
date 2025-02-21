@@ -25,7 +25,6 @@ public class HorizontalSliderTest {
     @Test
     void horizontalSlider() throws InterruptedException {
         horizontalSliderPage.getPointer();
-//        Thread.sleep(1000);
 
         Assert.assertTrue(horizontalSliderPage.isSliderSetToValue());
     }
