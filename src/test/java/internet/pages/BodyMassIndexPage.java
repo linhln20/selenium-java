@@ -36,11 +36,12 @@ public class BodyMassIndexPage {
     }
 
     public void clickCalculateBtn(){
-        Browser.initializeWait(10);
+        Browser.initializeWait(5);
         Browser.clickBtn(calculateButton);
     }
 
     public String getResult() {
+        Browser.initializeWait(5);
         return Browser.getText(resultLabel);
     }
 }
