@@ -32,17 +32,17 @@ public class BodyMassIndexPage {
             Browser.clickBtn(femaleRadioButton);
         }
         Browser.fill(heightTextBox, String.valueOf(height));
-        Browser.initializeWait(1);
+//        Browser.initializeWait(1);
         Browser.fill(weightTextBox, String.valueOf(weight));
     }
 
     public void clickCalculateBtn(){
-        Browser.initializeWait(1);
+//        Browser.initializeWait(1);
         Browser.clickBtn(calculateButton);
     }
 
     public String getResult() {
-        Browser.initializeWait(2);
+        Browser.initializeWait(10);
         return Browser.getText(resultLabel);
     }
 }
