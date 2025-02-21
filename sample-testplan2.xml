@@ -26,7 +26,7 @@
 <!--            <class name="internet.SwagLabsTest"/>-->
             <class name="internet.HorizontalSliderTest"/>
         </classes>
-<!--    </test>-->
+    </test>
 <!--    <test name="Edge Browser">-->
 <!--        <parameter name="browser" value="edge"/>-->
 <!--        <parameter name="url" value="https://the-internet.herokuapp.com"/>-->
