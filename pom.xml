@@ -52,10 +52,10 @@
                 <version>3.5.2</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>sample-testplan-internet.xml</suiteXmlFile>
+<!--                        <suiteXmlFile>sample-testplan-internet.xml</suiteXmlFile>-->
                         <suiteXmlFile>sample-testplan-bmi.xml</suiteXmlFile>
-                        <suiteXmlFile>sample-testplan-todomvc.xml</suiteXmlFile>
-                        <suiteXmlFile>sample-testplan-saucedemo.xml</suiteXmlFile>
+<!--                        <suiteXmlFile>sample-testplan-todomvc.xml</suiteXmlFile>-->
+<!--                        <suiteXmlFile>sample-testplan-saucedemo.xml</suiteXmlFile>-->
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

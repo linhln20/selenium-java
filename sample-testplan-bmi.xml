@@ -1,4 +1,4 @@
-<suite name="BMI" parallel="tests" thread-count="3">
+<suite name="BMI">
     <test name="BMI test">
         <parameter name="browser" value="chrome"/>
         <parameter name="url" value="https://www.calculator.net"/>
