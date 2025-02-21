@@ -13,12 +13,12 @@ public class HorizontalSliderTest {
 
     @BeforeMethod
     void setUp(String url) {
-        Browser.openBrowser("edge");
+        Browser.openBrowser("chrome");
         horizontalSliderPage = new HorizontalSliderPage();
         horizontalSliderPage.open(url+"/horizontal_slider");
     }
 
-    @Test (groups = {"wip"})
+    @Test //(groups = {"wip"})
     void horizontalSlider() throws InterruptedException {
         horizontalSliderPage.getPointer();
 
