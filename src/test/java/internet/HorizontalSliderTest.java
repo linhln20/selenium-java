@@ -13,6 +13,7 @@ import static supports.Browser.maximize;
 
 public class HorizontalSliderTest {
     HorizontalSliderPage horizontalSliderPage;
+
     @Parameters({"browser","url"})
     @BeforeMethod
     void setUp(String browser, String url) {
@@ -23,7 +24,7 @@ public class HorizontalSliderTest {
     }
 
     @Test
-    void horizontalSlider() throws InterruptedException {
+    void horizontalSlider() {
         horizontalSliderPage.getPointer();
 
         Assert.assertTrue(horizontalSliderPage.isSliderSetToValue());

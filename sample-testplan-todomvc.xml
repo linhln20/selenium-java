@@ -1,4 +1,4 @@
-<suite name="BMI">
+<suite name="TodoMVC">
     <groups>
         <run>
             <exclude name="wip"/>
@@ -6,9 +6,9 @@
     </groups>
         <test name="Chrome Browser headless">
             <parameter name="browser" value="chrome-headless"/>
-            <parameter name="url" value="https://www.saucedemo.com"/>
+            <parameter name="url" value="https://todomvc.com/examples/react/dist/"/>
             <classes>
-                <class name="saucedemo.SwagLabsTest"/>
+                <class name="todomvc.TodoMVCTest"/>
             </classes>
         </test>
 </suite>

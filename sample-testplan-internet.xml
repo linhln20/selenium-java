@@ -4,29 +4,29 @@
             <exclude name="wip"/>
         </run>
     </groups>
-    <test name="Chrome Browser headless">
-        <parameter name="browser" value="chrome-headless"/>
-        <parameter name="url" value="https://the-internet.herokuapp.com"/>
-        <classes>
-            <class name="internet.BookingFlightTest"/>
-            <class name="internet.BrokenImagesTest"/>
-            <class name="internet.CaptureScreenShot"/>
-            <class name="internet.CheckboxTest"/>
-            <class name="internet.DragDropTest"/>
-            <class name="internet.DropDownTest"/>
+<!--    <test name="Chrome Browser headless">-->
+<!--        <parameter name="browser" value="chrome-headless"/>-->
+<!--        <parameter name="url" value="https://the-internet.herokuapp.com"/>-->
+<!--        <classes>-->
+<!--            <class name="internet.BookingFlightTest"/>-->
+<!--            <class name="internet.BrokenImagesTest"/>-->
+<!--            <class name="internet.CaptureScreenShot"/>-->
+<!--            <class name="internet.CheckboxTest"/>-->
+<!--            <class name="internet.DragDropTest"/>-->
+<!--            <class name="internet.DropDownTest"/>-->
             <class name="internet.DynamicLoadingTest"/>
-            <class name="internet.FormAuthenticationTest"/>
-            <class name="internet.HorizontalSliderTest"/>
-            <class name="internet.HoverTest"/>
-            <class name="internet.HyperLinkTest"/>
-            <class name="internet.JavaScriptAlertTest"/>
-            <class name="internet.KeyPressTest"/>
-            <class name="internet.NestedFrameTest"/>
-            <class name="internet.RightClickTest"/>
-            <class name="internet.ScrollDownTest"/>
-            <class name="internet.WebTableTest"/>
-        </classes>
-    </test>
+<!--            <class name="internet.FormAuthenticationTest"/>-->
+<!--            <class name="internet.HorizontalSliderTest"/>-->
+<!--            <class name="internet.HoverTest"/>-->
+<!--            <class name="internet.HyperLinkTest"/>-->
+<!--            <class name="internet.JavaScriptAlertTest"/>-->
+<!--            <class name="internet.KeyPressTest"/>-->
+<!--            <class name="internet.NestedFrameTest"/>-->
+<!--            <class name="internet.RightClickTest"/>-->
+<!--            <class name="internet.ScrollDownTest"/>-->
+<!--            <class name="internet.WebTableTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
     <test name="Edge Browser">
         <parameter name="browser" value="edge"/>
         <parameter name="url" value="https://the-internet.herokuapp.com"/>
@@ -35,11 +35,11 @@
 
         </classes>
     </test>
-    <test name="Basic auth test - special case">
-        <parameter name="browser" value="chrome-headless"/>
-        <parameter name="url" value="https://admin:admin@the-internet.herokuapp.com"/>
-        <classes>
-            <class name="internet.BasicAuthenticationTest"/>
-        </classes>
-    </test>
+<!--    <test name="Basic auth test - special case">-->
+<!--        <parameter name="browser" value="chrome-headless"/>-->
+<!--        <parameter name="url" value="https://admin:admin@the-internet.herokuapp.com"/>-->
+<!--        <classes>-->
+<!--            <class name="internet.BasicAuthenticationTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 </suite>

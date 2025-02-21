@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 import supports.Browser;
 
 import static supports.Browser.openBrowser;
+import static supports.Browser.quit;
 
 public class DynamicLoadingTest {
     DynamicLoadingPage dynamicLoadingPage;
@@ -44,6 +45,6 @@ public class DynamicLoadingTest {
         if (testResult.isSuccess()) {
             Browser.captureScreen(testResult.getName());
         }
-        Browser.quit();
+        quit();
     }
 }

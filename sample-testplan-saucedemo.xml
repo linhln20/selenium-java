@@ -5,7 +5,7 @@
         </run>
     </groups>
 
-    <test name="Sauce demo">
+    <test name="Chrome Browser headless">
         <parameter name="browser" value="chrome-headless"/>
         <parameter name="url" value="https://www.saucedemo.com"/>
         <classes>

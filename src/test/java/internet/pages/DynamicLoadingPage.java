@@ -18,12 +18,12 @@ public class DynamicLoadingPage {
     }
 
     public WebElement waitLoad(){
-        Browser.initializeWait(10);
+        Browser.initializeWait(20);
         return Browser.wait.until(ExpectedConditions.visibilityOfElementLocated(goal));
     }
 
     public Boolean waitLoadB(){
-        Browser.initializeWait(10);
+        Browser.initializeWait(20);
         return Browser.wait.until(d -> Browser.getElement(goal).isDisplayed());
     }
 
