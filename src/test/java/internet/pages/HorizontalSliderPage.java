@@ -23,19 +23,11 @@ public class HorizontalSliderPage {
     public void getPointer() {
         Actions actions = new Actions(Browser.getDriver());
         WebElement pointer = Browser.getElement(By.xpath("//div[@class='sliderContainer']/input"));
+        WebElement nextPoint = Browser.getElement(By.cssSelector(".example h3"));
         int width = pointer.getSize().getWidth();
         actions.clickAndHold(pointer).moveByOffset(width, 0).perform();
-//        Browser.initializeWait(3);
-        Robot robot;
-        try {
-            robot = new Robot();
-        } catch (AWTException e) {
-            throw new RuntimeException("Failed to create Robot instance", e);
-        }
-        int x = 0;
-        int y = width+100;
-        robot.mouseMove(x, y);
         Browser.initializeWait(3);
+        actions.moveToElement(nextPoint).perform();
     }
 
     public boolean isSliderSetToValue() {
