@@ -18,7 +18,7 @@ public class HorizontalSliderTest {
         horizontalSliderPage.open(url+"/horizontal_slider");
     }
 
-    @Test (groups = {"wip"})
+    @Test //(groups = {"wip"})
     void horizontalSlider() throws InterruptedException {
         horizontalSliderPage.getPointer();
 

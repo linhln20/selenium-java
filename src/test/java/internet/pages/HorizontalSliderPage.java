@@ -35,11 +35,8 @@ public class HorizontalSliderPage {
         Browser.initializeWait(3);
     }
 
-    public static void waitDuration() {
-        Browser.initializeWait(40);
-    }
-
     public static Boolean isSliderSetToValue() {
+        Browser.initializeWait(3);
         return Browser.wait.until(ExpectedConditions.textToBe(sliderValueLocator, "5"));
     }
 }
