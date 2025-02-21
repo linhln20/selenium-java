@@ -6,8 +6,8 @@ import supports.Browser;
 import static supports.Browser.visit;
 
 public class BodyMassIndexPage {
-    public void open(){
-        visit("https://www.calculator.net/bmi-calculator.html");
+    public void open(String url){
+        visit(url);
     }
 
     public void selectMetricUnit(){ //    Select metric unit tab

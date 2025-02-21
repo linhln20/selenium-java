@@ -17,13 +17,13 @@ public class BodyMassIndexTest {
         };
     }
 
+    @Parameters({"browser","url"})
     @BeforeMethod
-    void setUp() {
+    void setUp(String browser, String url){
         Browser.openBrowser("chrome");
         bodyMassIndexPage = new BodyMassIndexPage();
-        bodyMassIndexPage.open();
+        bodyMassIndexPage.open(url+"/bmi-calculator");
     }
-    @Parameters({"browser","url"})
 
     @Test(dataProvider = "testData")//, groups = {"wip"}
     void verifyBMICalculator(int age, String gender, int height, int weight) {

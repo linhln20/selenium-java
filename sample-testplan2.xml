@@ -38,7 +38,7 @@
 
     <test name="Body mass index">
         <parameter name="browser" value="chrome"/>
-        <parameter name="url" value="https://www.calculator.net/bmi-calculator.html"/>
+        <parameter name="url" value="https://www.calculator.net"/>
         <classes>
             <class name="internet.BodyMassIndexTest"/>
         </classes>
