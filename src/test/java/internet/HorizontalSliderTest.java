@@ -5,22 +5,27 @@ import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import supports.Browser;
 
+import static supports.Browser.maximize;
+
 public class HorizontalSliderTest {
     HorizontalSliderPage horizontalSliderPage;
-
+    @Parameters({"browser","url"})
     @BeforeMethod
-    void setUp(String url) {
-        Browser.openBrowser("chrome");
+    void setUp(String browser, String url) {
+        Browser.openBrowser(browser);
+        maximize();
         horizontalSliderPage = new HorizontalSliderPage();
         horizontalSliderPage.open(url+"/horizontal_slider");
     }
 
-    @Test //(groups = {"wip"})
+    @Test
     void horizontalSlider() throws InterruptedException {
         horizontalSliderPage.getPointer();
+//        Thread.sleep(1000);
 
         Assert.assertTrue(horizontalSliderPage.isSliderSetToValue());
     }

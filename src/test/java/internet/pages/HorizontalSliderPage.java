@@ -3,10 +3,13 @@ package internet.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import supports.Browser;
 
 import java.awt.*;
+import java.time.Duration;
 
 import static supports.Browser.visit;
 
@@ -22,7 +25,7 @@ public class HorizontalSliderPage {
         WebElement pointer = Browser.getElement(By.xpath("//div[@class='sliderContainer']/input"));
         int width = pointer.getSize().getWidth();
         actions.clickAndHold(pointer).moveByOffset(width, 0).perform();
-        Browser.initializeWait(3);
+//        Browser.initializeWait(3);
         Robot robot;
         try {
             robot = new Robot();
@@ -35,8 +38,12 @@ public class HorizontalSliderPage {
         Browser.initializeWait(3);
     }
 
-    public static Boolean isSliderSetToValue() {
-        Browser.initializeWait(3);
-        return Browser.wait.until(ExpectedConditions.textToBe(sliderValueLocator, "5"));
+    public boolean isSliderSetToValue() {
+        WebDriverWait wait = new WebDriverWait(Browser.getDriver(), Duration.ofSeconds(3));
+        try {
+            return wait.until(ExpectedConditions.textToBe(sliderValueLocator, "5"));
+        } catch (Exception e) {
+            return false;
+        }
     }
 }

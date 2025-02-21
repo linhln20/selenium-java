@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 
+
 public class Browser {
     private static WebDriver driver;
     public static WebDriverWait wait;
