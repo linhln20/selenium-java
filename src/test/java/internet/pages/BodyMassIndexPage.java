@@ -36,6 +36,7 @@ public class BodyMassIndexPage {
     }
 
     public void clickCalculateBtn(){
+        Browser.initializeWait(5);
         Browser.clickBtn(calculateButton);
     }
 
