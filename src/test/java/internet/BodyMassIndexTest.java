@@ -15,19 +15,19 @@ public class BodyMassIndexTest {
     @DataProvider
     Object[][] testData() {
         return new Object[][]{
-                {34, "Male", 173, 65},
-                {20, "Female", 165, 47}
+                {34, "male", 173, 65},
+                {20, "female", 165, 47}
         };
     }
 
     @BeforeMethod
     void setUp() {
-        Browser.openBrowser("edge");
+        Browser.openBrowser("chrome");
         bodyMassIndexPage = new BodyMassIndexPage();
         bodyMassIndexPage.open();
     }
 
-    @Test(dataProvider = "testData")
+    @Test(dataProvider = "testData", groups = {"wip"})
     void verifyBMICalculator(int age, String gender, int height, int weight) {
         bodyMassIndexPage.selectMetricUnit();
         bodyMassIndexPage.fillAge(age);

@@ -11,6 +11,7 @@ import supports.Browser;
 
 public class DropDownTest {
     DropDownPage dropDownPage;
+
     @BeforeMethod
     public void setUp(){
         Browser.openBrowser("chrome");

@@ -19,9 +19,9 @@ public class BodyMassIndexPage {
     }
 
     public void selectGender(String gender) {
-        if (gender.equalsIgnoreCase("Male")) {
+        if (gender.equalsIgnoreCase("male")) {
             Browser.getElement(By.xpath("//label[@for='csex1']")).click(); // Chọn Male
-        } else if (gender.equalsIgnoreCase("Female")) {
+        } else if (gender.equalsIgnoreCase("female")) {
             Browser.getElement(By.xpath("//label[@for='csex2']")).click(); // Chọn Female
         } else {
             throw new IllegalArgumentException("Giới tính không hợp lệ! Chỉ chấp nhận 'male' hoặc 'female'.");
