@@ -24,7 +24,7 @@ public class BodyMassIndexTest {
         openBrowser(browser);
         maximize();
         bodyMassIndexPage = new BodyMassIndexPage();
-        bodyMassIndexPage.open(url+"/bmi-calculator.html");
+        bodyMassIndexPage.open(url+"/bmi-calculator");
     }
 
     @Test (dataProvider = "bmiTestData")
