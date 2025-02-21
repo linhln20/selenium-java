@@ -11,7 +11,7 @@ mvn clean test
 ```
 
 ## How to create test plan
-[Sample Test Plan](sample-testplan-internet.xml)
+[Sample Test Plan](sample-testplan2.xml)
 
 
 ## How to write a new test case with page object model
@@ -28,4 +28,4 @@ mvn clean test
   - Can not double-click to deselect, just press the key "Ctrl" and select at the same moment
 
 ## Supports
--  Selenium Owner methods
+-  Selenium Owner methods# automation-test
