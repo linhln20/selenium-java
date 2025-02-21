@@ -6,8 +6,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.*;
 import supports.Browser;
 
-import static supports.Browser.openBrowser;
-import static supports.Browser.quit;
+import static supports.Browser.*;
 
 public class BodyMassIndexTest {
     BodyMassIndexPage bodyMassIndexPage;
@@ -23,6 +22,7 @@ public class BodyMassIndexTest {
     @BeforeMethod
     void setUp(String browser, String url){
         openBrowser(browser);
+        maximize();
         bodyMassIndexPage = new BodyMassIndexPage();
         bodyMassIndexPage.open(url+"/bmi-calculator");
     }
