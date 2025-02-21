@@ -22,12 +22,12 @@ public class BodyMassIndexTest {
 
     @BeforeMethod
     void setUp() {
-        Browser.openBrowser("chrome");
+        Browser.openBrowser("firefox");
         bodyMassIndexPage = new BodyMassIndexPage();
         bodyMassIndexPage.open();
     }
 
-    @Test(dataProvider = "testData", groups = {"wip"})
+    @Test(dataProvider = "testData")//, groups = {"wip"}
     void verifyBMICalculator(int age, String gender, int height, int weight) {
         bodyMassIndexPage.selectMetricUnit();
         bodyMassIndexPage.fillAge(age);
