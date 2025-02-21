@@ -1,0 +1,17 @@
+<suite name="SauceDemo">
+    <groups>
+        <run>
+            <exclude name="wip"/>
+        </run>
+    </groups>
+
+    <test name="Sauce demo">
+        <parameter name="browser" value="chrome-headless"/>
+        <parameter name="url" value="https://www.saucedemo.com"/>
+        <classes>
+            <class name="saucedemo.SwagLabsTest"/>
+        </classes>
+    </test>
+
+
+</suite>

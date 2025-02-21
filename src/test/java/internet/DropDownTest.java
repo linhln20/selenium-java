@@ -9,14 +9,17 @@ import org.testng.ITestResult;
 import org.testng.annotations.*;
 import supports.Browser;
 
+import static supports.Browser.openBrowser;
+
 public class DropDownTest {
     DropDownPage dropDownPage;
 
+    @Parameters({"browser", "url"})
     @BeforeMethod
-    public void setUp(){
-        Browser.openBrowser("chrome");
+    void setUp(String browser, String url){
+        openBrowser(browser);
         dropDownPage = new DropDownPage();
-        dropDownPage.open();
+        dropDownPage.open(url+"/dropdown");
     }
 
     @Test

@@ -4,9 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 import supports.Browser;
 
+import static supports.Browser.visit;
+
 public class DropDownPage {
-    public void open(){
-        Browser.visit("https://the-internet.herokuapp.com/dropdown");
+    public void open(String url){
+        visit(url);
     }
 
     public void select(String option){

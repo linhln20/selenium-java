@@ -7,8 +7,8 @@ import supports.Browser;
 import static supports.Browser.visit;
 
 public class ScrollDownPage {
-    public void open(){
-     visit("https://the-internet.herokuapp.com/infinite_scroll");
+    public void open(String url){
+        visit(url);
     }
 
     public static void scrollDown() throws InterruptedException {

@@ -5,16 +5,20 @@ import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import supports.Browser;
 
+import static supports.Browser.openBrowser;
+
 public class HoverTest {
     HoverPage hoverPage;
+    @Parameters({"browser", "url"})
     @BeforeMethod
-    void setUp() {
-        Browser.openBrowser("chrome");
+    void setUp(String browser, String url){
+        openBrowser(browser);
         hoverPage = new HoverPage();
-        hoverPage.open();
+        hoverPage.open(url+"/hovers");
     }
 
     @Test

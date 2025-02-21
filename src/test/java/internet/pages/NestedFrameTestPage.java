@@ -7,8 +7,8 @@ import static supports.Browser.visit;
 
 public class NestedFrameTestPage {
     String content = Browser.getText(By.xpath("/html/body"));
-    public void open(){
-        visit("https://the-internet.herokuapp.com/nested_frames");
+    public void open(String url){
+        visit(url);
     }
 
     public void swithFame(String frameName){

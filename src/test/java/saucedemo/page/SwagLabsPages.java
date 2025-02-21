@@ -1,4 +1,4 @@
-package internet.pages;
+package saucedemo.page;
 
 import org.openqa.selenium.By;
 import supports.Browser;
@@ -6,8 +6,8 @@ import supports.Browser;
 import static supports.Browser.visit;
 
 public class SwagLabsPages {
-    public void open(){
-        visit("https://www.saucedemo.com");
+    public void open(String url){
+        visit(url);
     }
 
     public void setUsername(By locator, String username){

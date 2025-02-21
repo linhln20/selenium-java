@@ -8,8 +8,8 @@ import supports.Browser;
 import static supports.Browser.visit;
 
 public class DragDropElementsPage {
-    public void open(){
-        visit("https://the-internet.herokuapp.com/drag_and_drop");
+    public void open(String url){
+        visit(url);
     }
 
     public void dragDrop(){

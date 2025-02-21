@@ -4,19 +4,23 @@ import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import internet.pages.CheckboxPage;
 import supports.Browser;
+
+import static supports.Browser.openBrowser;
 import static supports.Browser.quit;
 
 public class CheckboxTest {
     CheckboxPage checkboxPage;
 
+    @Parameters({"browser", "url"})
     @BeforeMethod
-    void setup(){
-         Browser.openBrowser("chrome");
+    void setUp(String browser, String url){
+        openBrowser(browser);
          checkboxPage = new CheckboxPage();
-         checkboxPage.open();
+         checkboxPage.open(url+"/checkboxes");
     }
 
     @Test

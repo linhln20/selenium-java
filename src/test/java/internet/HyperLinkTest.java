@@ -5,16 +5,20 @@ import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import supports.Browser;
 
+import static supports.Browser.openBrowser;
+
 public class HyperLinkTest {
     HyperLinkPage hyperlinkpage;
+    @Parameters({"browser", "url"})
     @BeforeMethod
-    void setUp() {
-        Browser.openBrowser("chrome");
+    void setUp(String browser, String url){
+        openBrowser(browser);
         hyperlinkpage = new HyperLinkPage();
-        hyperlinkpage.open();
+        hyperlinkpage.open(url+"/status_codes");
     }
     @Test
      void hyperLink(){

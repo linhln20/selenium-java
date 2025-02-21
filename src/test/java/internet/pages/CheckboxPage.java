@@ -5,8 +5,8 @@ import static supports.Browser.*;
 
 public class CheckboxPage {
 
-    public void open(){
-        visit("https://the-internet.herokuapp.com/checkboxes");
+    public void open(String url){
+        visit(url);
     }
 
     private By getCheckbox(String checkboxName){

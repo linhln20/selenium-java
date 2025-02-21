@@ -8,8 +8,8 @@ import supports.Browser;
 import static supports.Browser.visit;
 
 public class KeyPressPage {
-    public void open(){
-     visit("https://the-internet.herokuapp.com/key_presses");
+    public void open(String url){
+     visit(url);
     }
     public void keyControl(){
         Actions actions = new Actions(Browser.getDriver());

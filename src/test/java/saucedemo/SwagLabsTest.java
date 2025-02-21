@@ -1,22 +1,26 @@
-package internet;
+package saucedemo;
 
-import internet.pages.SwagLabsPages;
+import saucedemo.page.SwagLabsPages;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import supports.Browser;
+
+import static supports.Browser.openBrowser;
 
 public class SwagLabsTest {
     SwagLabsPages swagLabsPages;
 
+    @Parameters({"browser", "url"})
     @BeforeMethod
-    void setUp() {
-        Browser.openBrowser("chrome");
+    void setUp(String browser, String url){
+        openBrowser(browser);
         swagLabsPages = new SwagLabsPages();
-        swagLabsPages.open();
+        swagLabsPages.open(url);
     }
 
     @Test

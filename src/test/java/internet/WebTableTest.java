@@ -5,19 +5,23 @@ import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import supports.Browser;
 
 import java.util.List;
 
-public class DueTableTest {
+import static supports.Browser.openBrowser;
+
+public class WebTableTest {
     WebTablePage webTablePage;
 
+    @Parameters({"browser", "url"})
     @BeforeMethod
-    void setUp() {
-        Browser.openBrowser("Chrome");
+    void setUp(String browser, String url){
+        openBrowser(browser);
         webTablePage = new WebTablePage();
-        webTablePage.open();
+        webTablePage.open(url+"/tables");
     }
 
     @Test
