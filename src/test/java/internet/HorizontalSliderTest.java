@@ -18,7 +18,7 @@ public class HorizontalSliderTest {
         horizontalSliderPage.open();
     }
 
-    @Test(groups = {"wip"})
+    @Test //(groups = {"wip"})
     void horizontalSlider() throws InterruptedException {
         horizontalSliderPage.getPointer();
         horizontalSliderPage.waitDuration();

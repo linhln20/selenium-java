@@ -47,7 +47,7 @@ public class Browser {
                 break;
             }
         }
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
     public static List<WebElement> all(By locator) {
