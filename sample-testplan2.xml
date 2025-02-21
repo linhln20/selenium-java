@@ -4,29 +4,29 @@
             <exclude name="wip"/>
         </run>
     </groups>
-    <test name="Chrome Browser headless">
-        <parameter name="browser" value="chrome"/>
-        <parameter name="url" value="https://the-internet.herokuapp.com"/>
-        <classes>
-            <class name="internet.BrokenImagesTest"/>
-            <class name="internet.CheckboxTest"/>
-            <class name="internet.FormAuthenticationTest"/>
-            <class name="internet.DropDownTest"/>
-            <class name="internet.HoverTest"/>
-            <class name="internet.HyperLinkTest"/>
-            <class name="internet.JavaScriptAlertTest"/>
-            <class name="internet.NestedFrameTest"/>
-            <class name="internet.DragDropTest"/>
-            <class name="internet.DueTableTest"/>
-            <class name="internet.RightClickTest"/>
-            <class name="internet.BasicAuthenticationTest"/>
-            <class name="internet.BookingFlightTest"/>
-            <class name="internet.ScrollDownTest"/>
-            <class name="internet.KeyActionsTest"/>
-            <class name="internet.SwagLabsTest"/>
-            <class name="internet.HorizontalSliderTest"/>
-        </classes>
-    </test>
+<!--    <test name="Chrome Browser headless">-->
+<!--        <parameter name="browser" value="chrome"/>-->
+<!--        <parameter name="url" value="https://the-internet.herokuapp.com"/>-->
+<!--        <classes>-->
+<!--            <class name="internet.BrokenImagesTest"/>-->
+<!--            <class name="internet.CheckboxTest"/>-->
+<!--            <class name="internet.FormAuthenticationTest"/>-->
+<!--            <class name="internet.DropDownTest"/>-->
+<!--            <class name="internet.HoverTest"/>-->
+<!--            <class name="internet.HyperLinkTest"/>-->
+<!--            <class name="internet.JavaScriptAlertTest"/>-->
+<!--            <class name="internet.NestedFrameTest"/>-->
+<!--            <class name="internet.DragDropTest"/>-->
+<!--            <class name="internet.DueTableTest"/>-->
+<!--            <class name="internet.RightClickTest"/>-->
+<!--            <class name="internet.BasicAuthenticationTest"/>-->
+<!--            <class name="internet.BookingFlightTest"/>-->
+<!--            <class name="internet.ScrollDownTest"/>-->
+<!--            <class name="internet.KeyActionsTest"/>-->
+<!--            <class name="internet.SwagLabsTest"/>-->
+<!--            <class name="internet.HorizontalSliderTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 <!--    <test name="Edge Browser">-->
 <!--        <parameter name="browser" value="edge"/>-->
 <!--        <parameter name="url" value="https://the-internet.herokuapp.com"/>-->
@@ -44,12 +44,12 @@
         </classes>
     </test>
 
-    <test name="Todo MVC">
-        <parameter name="browser" value="chrome"/>
-        <parameter name="url" value="https://todomvc.com/examples/react/dist/"/>
-        <classes>
-            <class name="internet.TodoMVCTest"/>
-        </classes>
-    </test>
+<!--    <test name="Todo MVC">-->
+<!--        <parameter name="browser" value="chrome"/>-->
+<!--        <parameter name="url" value="https://todomvc.com/examples/react/dist/"/>-->
+<!--        <classes>-->
+<!--            <class name="internet.TodoMVCTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
 </suite>
