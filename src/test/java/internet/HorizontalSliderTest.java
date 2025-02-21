@@ -12,10 +12,10 @@ public class HorizontalSliderTest {
     HorizontalSliderPage horizontalSliderPage;
 
     @BeforeMethod
-    void setUp() {
+    void setUp(String url) {
         Browser.openBrowser("edge");
         horizontalSliderPage = new HorizontalSliderPage();
-        horizontalSliderPage.open();
+        horizontalSliderPage.open(url+"/horizontal_slider");
     }
 
     @Test //(groups = {"wip"})

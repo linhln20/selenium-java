@@ -13,8 +13,8 @@ import static supports.Browser.visit;
 public class HorizontalSliderPage {
     private static By sliderValueLocator = By.id("range");
 
-    public void open() {
-        visit("https://the-internet.herokuapp.com/horizontal_slider");
+    public void open(String url) {
+        visit(url);
     }
 
     public void getPointer() {
@@ -22,7 +22,7 @@ public class HorizontalSliderPage {
         WebElement pointer = Browser.getElement(By.xpath("//div[@class='sliderContainer']/input"));
         int width = pointer.getSize().getWidth();
         actions.clickAndHold(pointer).moveByOffset(width, 0).perform();
-        Browser.initializeWait(5);
+        Browser.initializeWait(3);
         Robot robot;
         try {
             robot = new Robot();
