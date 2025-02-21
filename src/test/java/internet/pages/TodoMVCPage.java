@@ -42,7 +42,7 @@ public class TodoMVCPage {
     }
 
     public void deleteTodo(){
-        WebElement element = Browser.getElement(By.cssSelector(".todo-list li"));
+        WebElement element = Browser.getElement(By.cssSelector(".todo-list li label"));
             Browser.hover(element);
         Browser.clickBtn(By.cssSelector(".todo-list li .destroy"));
         }

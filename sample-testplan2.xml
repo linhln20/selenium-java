@@ -25,6 +25,7 @@
             <class name="internet.KeyActionsTest"/>
             <class name="internet.SwagLabsTest"/>
             <class name="internet.TodoMVCTest"/>
+            <class name="internet.BodyMassIndexTest"/>
         </classes>
     </test>
     <test name="Edge Browser">

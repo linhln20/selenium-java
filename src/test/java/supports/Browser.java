@@ -109,6 +109,12 @@ public class Browser {
         element.sendKeys(text);
     }
 
+    public static void fillInt(By locator, int text) {
+        WebElement element = driver.findElement(locator);
+        element.clear();
+        element.sendKeys(String.valueOf(text));
+    }
+
     public static WebDriver getDriver() {
         return driver;
     }

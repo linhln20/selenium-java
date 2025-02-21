@@ -5,6 +5,7 @@ import internet.pages.FruitsPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.*;
 import supports.Browser;
 
@@ -52,7 +53,10 @@ public class DropDownTest {
     }
 
     @AfterMethod
-    public void tearDown(){
+    void tearDown(ITestResult testResult){
+        if(testResult.isSuccess()){
+            Browser.captureScreen(testResult.getName());
+        }
         Browser.quit();
     }
 }

@@ -3,7 +3,10 @@ package internet;
 import internet.pages.BrokenImagesPage;
 import org.openqa.selenium.By;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.*;
+import supports.Browser;
+
 import static supports.Browser.openBrowser;
 import static supports.Browser.quit;
 
@@ -32,7 +35,10 @@ public class BrokenImagesTest { //chay bang file xml
     }
 
     @AfterMethod
-    void tearDown() {
-        quit();
+    void tearDown(ITestResult testResult){
+        if(testResult.isSuccess()){
+            Browser.captureScreen(testResult.getName());
+        }
+        Browser.quit();
     }
 }
