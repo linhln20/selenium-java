@@ -27,7 +27,7 @@ public class BodyMassIndexTest {
         bodyMassIndexPage.open(url+"/bmi-calculator");
     }
 
-    @Test (dataProvider = "bmiTestData", groups = {"wip"})
+    @Test (dataProvider = "bmiTestData")
     void verifyBMICalculator(int age, double height, double weight, String gender) {
         bodyMassIndexPage.selectMetricUnit();
         bodyMassIndexPage.fillForm(age, height,weight,gender);
