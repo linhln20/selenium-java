@@ -37,7 +37,7 @@
 <!--    </test>-->
 
     <test name="Body mass index">
-        <parameter name="browser" value="edge"/>
+        <parameter name="browser" value="chrome"/>
         <parameter name="url" value="https://www.calculator.net"/>
         <classes>
             <class name="internet.BodyMassIndexTest"/>
