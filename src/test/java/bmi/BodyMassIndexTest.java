@@ -21,16 +21,16 @@ public class BodyMassIndexTest {
 
     @Parameters({"browser"})
     @BeforeMethod
-    void setUp(String browser){
+    void setUp(String browser) {
         openBrowser(browser);
         bodyMassIndexPage = new BodyMassIndexPage();
         bodyMassIndexPage.open();
+        bodyMassIndexPage.selectMetricUnit();
     }
 
-    @Test (dataProvider = "bmiTestData")
+    @Test(dataProvider = "bmiTestData")
     void verifyBMICalculator(int age, double height, double weight, String gender) {
-        bodyMassIndexPage.selectMetricUnit();
-        bodyMassIndexPage.fillForm(age, height,weight,gender);
+        bodyMassIndexPage.fillForm(age, height, weight, gender);
         bodyMassIndexPage.clickCalculateBtn();
 
         String bmiResult = CalculateBMI.calculateBmi(height, weight);
@@ -39,8 +39,8 @@ public class BodyMassIndexTest {
     }
 
     @AfterMethod
-    void tearDown(ITestResult testResult){
-        if(testResult.isSuccess()){
+    void tearDown(ITestResult testResult) {
+        if (testResult.isSuccess()) {
             Browser.captureScreen(testResult.getName());
         }
         quit();
