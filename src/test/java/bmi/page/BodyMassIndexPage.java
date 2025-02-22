@@ -6,7 +6,7 @@ import supports.Browser;
 import static supports.Browser.visit;
 
 public class BodyMassIndexPage {
-    private By metricTab = By.cssSelector("li#menuon a");
+    private By metricTab = By.id("menuon");
     private By ageTextBox = By.cssSelector("input#cage");
     private By maleRadioButton = By.cssSelector("td label.cbcontainer:first-child");
     private By femaleRadioButton = By.cssSelector("td label.cbcontainer:last-child");
