@@ -56,7 +56,7 @@ public class Browser {
             }
         }
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        maximize();
+//        maximize();
     }
 
     public static List<WebElement> all(By locator) {
