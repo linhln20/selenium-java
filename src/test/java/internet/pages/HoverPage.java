@@ -8,8 +8,8 @@ import supports.Browser;
 import static supports.Browser.visit;
 
 public class HoverPage {
-    public void open(String url){
-        visit(url);
+    public void open(){
+        visit(" https://the-internet.herokuapp.com/hovers");
     }
     private By firstImage = By.xpath("//div[@class='example']/div[1]/img");
     private By firstImageText = By.xpath("//div[@class='example']/div[1]/div/h5");

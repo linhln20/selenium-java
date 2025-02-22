@@ -15,12 +15,12 @@ public class TodoMVCTest {
     TodoMVCPage todoMVCPage;
     String taskName = String.format("task %s", RandomText.randomString(1));
 
-    @Parameters({"browser", "url"})
+    @Parameters({"browser"})
     @BeforeMethod
-    void setUp(String browser, String url){
+    void setUp(String browser){
         openBrowser(browser);
         todoMVCPage = new TodoMVCPage();
-        todoMVCPage.open(url+"/examples/react/dist/");
+        todoMVCPage.open();
     }
 
     @Test

@@ -6,8 +6,8 @@ import supports.Browser;
 import static supports.Browser.visit;
 
 public class JavaScriptAlertPage {
-    public void open(String url){
-        visit(url);
+    public void open(){
+        visit("https://the-internet.herokuapp.com/javascript_alerts");
     }
     public void clickAlertBtn(String visibleText){
         Browser.click(By.xpath(String.format("//button[.='Click for JS %s']", visibleText)));

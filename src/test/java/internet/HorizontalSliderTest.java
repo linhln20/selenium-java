@@ -9,18 +9,15 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import supports.Browser;
 
-import static supports.Browser.maximize;
-
 public class HorizontalSliderTest {
     HorizontalSliderPage horizontalSliderPage;
 
-    @Parameters({"browser","url"})
+    @Parameters({"browser"})
     @BeforeMethod
-    void setUp(String browser, String url) {
+    void setUp(String browser) {
         Browser.openBrowser(browser);
-        maximize();
         horizontalSliderPage = new HorizontalSliderPage();
-        horizontalSliderPage.open(url+"/horizontal_slider");
+        horizontalSliderPage.open();
     }
 
     @Test

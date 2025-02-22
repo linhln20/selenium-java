@@ -14,12 +14,12 @@ import static supports.Browser.openBrowser;
 public class DropDownTest {
     DropDownPage dropDownPage;
 
-    @Parameters({"browser", "url"})
+    @Parameters({"browser"})
     @BeforeMethod
-    void setUp(String browser, String url){
+    void setUp(String browser){
         openBrowser(browser);
         dropDownPage = new DropDownPage();
-        dropDownPage.open(url+"/dropdown");
+        dropDownPage.open();
     }
 
     @Test

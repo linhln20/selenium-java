@@ -13,12 +13,12 @@ import static supports.Browser.openBrowser;
 public class ScrollDownTest {
     ScrollDownPage scrollDownPage;
 
-    @Parameters({"browser", "url"})
+    @Parameters({"browser"})
     @BeforeMethod
-    void setUp(String browser, String url){
+    void setUp(String browser){
         openBrowser(browser);
         scrollDownPage = new ScrollDownPage();
-        scrollDownPage.open(url+"/infinite_scroll");
+        scrollDownPage.open();
     }
 
     @Test

@@ -16,12 +16,12 @@ import static supports.Browser.openBrowser;
 public class WebTableTest {
     WebTablePage webTablePage;
 
-    @Parameters({"browser", "url"})
+    @Parameters({"browser"})
     @BeforeMethod
-    void setUp(String browser, String url){
+    void setUp(String browser){
         openBrowser(browser);
         webTablePage = new WebTablePage();
-        webTablePage.open(url+"/tables");
+        webTablePage.open();
     }
 
     @Test

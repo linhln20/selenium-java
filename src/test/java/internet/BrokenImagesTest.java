@@ -20,12 +20,12 @@ public class BrokenImagesTest { //chay bang file xml
         };
     }
 
-    @Parameters({"browser", "url"})
+    @Parameters({"browser"})
     @BeforeMethod
-    void setup(String browser, String url){
+    void setup(String browser){
         openBrowser(browser);
         brokenImagesPage = new BrokenImagesPage();
-        brokenImagesPage.open(url+"/broken_images");
+        brokenImagesPage.open();
     }
 
     @Test (dataProvider ="verifyBrokenImage")

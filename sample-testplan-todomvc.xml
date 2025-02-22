@@ -6,7 +6,6 @@
     </groups>
         <test name="Chrome Browser headless">
             <parameter name="browser" value="chrome-headless"/>
-            <parameter name="url" value="https://todomvc.com"/>
             <classes>
                 <class name="todomvc.TodoMVCTest"/>
             </classes>

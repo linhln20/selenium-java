@@ -13,12 +13,12 @@ import static supports.Browser.openBrowser;
 public class NestedFrameTest {
     NestedFrameTestPage nestedFrameTestPage;
 
-    @Parameters({"browser", "url"})
+    @Parameters({"browser"})
     @BeforeMethod
-    void setUp(String browser, String url){
+    void setUp(String browser){
         openBrowser(browser);
         nestedFrameTestPage = new NestedFrameTestPage();
-        nestedFrameTestPage.open(url+"/nested_frames");
+        nestedFrameTestPage.open();
     }
 
     @Test

@@ -9,8 +9,8 @@ public class FormAuthenticationPage {
     private By passwordTxt=By.id("password");
     private By loginBtn=By.cssSelector("button[type=submit]");
 
-    public void open(String url){
-    visit(url);
+    public void open(){
+    visit("https://the-internet.herokuapp.com/login");
     }
 
     public void login(String username, String password){

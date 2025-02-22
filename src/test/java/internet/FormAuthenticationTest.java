@@ -18,12 +18,12 @@ public class FormAuthenticationTest {
                 {"tomsmith","SuperSecretPassword","https://the-internet.herokuapp.com/login","error","Your password is invalid!"},
         };
     }
-    @Parameters({"browser","url"})
+    @Parameters({"browser"})
     @BeforeMethod
-    void setup(String browser, String url) {
+    void setup(String browser) {
         openBrowser(browser);
         formAuthenticationPage = new FormAuthenticationPage();
-        formAuthenticationPage.open(url+"/login");
+        formAuthenticationPage.open();
     }
 
     @Test(dataProvider = "testData")

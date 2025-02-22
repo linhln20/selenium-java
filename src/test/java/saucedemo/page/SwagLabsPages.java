@@ -6,8 +6,8 @@ import supports.Browser;
 import static supports.Browser.visit;
 
 public class SwagLabsPages {
-    public void open(String url){
-        visit(url);
+    public void open(){
+        visit("https://www.saucedemo.com");
     }
 
     public void setUsername(By locator, String username){

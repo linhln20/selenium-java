@@ -30,7 +30,6 @@
 
     <test name="Basic auth test - special case">
         <parameter name="browser" value="chrome-headless"/>
-        <parameter name="url" value="https://admin:admin@the-internet.herokuapp.com"/>
         <classes>
             <class name="internet.BasicAuthenticationTest"/>
         </classes>

@@ -14,12 +14,12 @@ import static supports.Browser.openBrowser;
 public class DragDropTest {
     DragDropElementsPage dragDropElementsPage;
 
-    @Parameters({"browser", "url"})
+    @Parameters({"browser"})
     @BeforeMethod
-    void setUp(String browser, String url){
+    void setUp(String browser){
         openBrowser(browser);
         dragDropElementsPage = new DragDropElementsPage();
-        dragDropElementsPage.open(url+"/drag_and_drop");
+        dragDropElementsPage.open();
     }
     @Test
     void dragDropElements(){

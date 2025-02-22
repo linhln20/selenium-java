@@ -16,8 +16,8 @@ import static supports.Browser.visit;
 public class HorizontalSliderPage {
     private static By sliderValueLocator = By.id("range");
 
-    public void open(String url) {
-        visit(url);
+    public void open() {
+        visit("https://the-internet.herokuapp.com/horizontal_slider");
     }
 
     public void getPointer() {

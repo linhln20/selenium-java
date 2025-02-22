@@ -15,9 +15,9 @@ public class BodyMassIndexPage {
     private By calculateButton = By.xpath("//input[@type='submit' and @value='Calculate']");
     private By resultLabel = By.cssSelector(".rightresult .bigtext b");
 
-    public void open(String url){
+    public void open(){
 //        Browser.clearBrowserCache();
-        visit(url);
+        visit("https://www.calculator.net/bmi-calculator.html");
     }
 
     public void selectMetricUnit(){ //    Select metric unit tab

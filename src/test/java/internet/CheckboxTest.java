@@ -15,12 +15,12 @@ import static supports.Browser.quit;
 public class CheckboxTest {
     CheckboxPage checkboxPage;
 
-    @Parameters({"browser", "url"})
+    @Parameters({"browser"})
     @BeforeMethod
     void setUp(String browser, String url){
         openBrowser(browser);
          checkboxPage = new CheckboxPage();
-         checkboxPage.open(url+"/checkboxes");
+         checkboxPage.open();
     }
 
     @Test

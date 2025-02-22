@@ -13,12 +13,12 @@ import static supports.Browser.openBrowser;
 
 public class HoverTest {
     HoverPage hoverPage;
-    @Parameters({"browser", "url"})
+    @Parameters({"browser"})
     @BeforeMethod
-    void setUp(String browser, String url){
+    void setUp(String browser){
         openBrowser(browser);
         hoverPage = new HoverPage();
-        hoverPage.open(url+"/hovers");
+        hoverPage.open();
     }
 
     @Test

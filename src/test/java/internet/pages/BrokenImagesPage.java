@@ -4,8 +4,8 @@ import org.openqa.selenium.By;
 import static supports.Browser.*;
 
 public class BrokenImagesPage {
-    public void open(String url){
-        visit(url);
+    public void open(){
+        visit("https://the-internet.herokuapp.com/broken_images");
     }
     public boolean isImagesBroken(By locator){
         return isBroken(locator);

@@ -16,8 +16,8 @@ import static supports.Browser.visit;
 public class WebTablePage {
     private By tableRows = By.xpath("//table[@id='table1']/tbody/tr");
 
-    public void open(String url){
-        visit(url);
+    public void open(){
+        visit(" https://the-internet.herokuapp.com/tables");
     }
 
     public List<Person> getTableData() {

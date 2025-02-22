@@ -1,9 +1,6 @@
 package internet;
 
-import internet.pages.CaptureScreenShotPage;
-import internet.pages.DynamicLoadingPage;
 import internet.pages.KeyPressPage;
-import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -16,12 +13,12 @@ import static supports.Browser.openBrowser;
 public class KeyPressTest {
     KeyPressPage keyPressPage;
 
-    @Parameters({"browser", "url"})
+    @Parameters({"browser"})
     @BeforeMethod
-    void setup(String browser, String url){
+    void setup(String browser){
         openBrowser(browser);
         keyPressPage = new KeyPressPage();
-        keyPressPage.open(url+"/key_presses");
+        keyPressPage.open();
     }
 
     @Test

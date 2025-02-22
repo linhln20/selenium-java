@@ -15,12 +15,12 @@ import static supports.Browser.quit;
 public class DynamicLoadingTest {
     DynamicLoadingPage dynamicLoadingPage;
 
-    @Parameters({"browser", "url"})
+    @Parameters({"browser"})
     @BeforeMethod
-    void setup(String browser, String url) {
+    void setup(String browser) {
         openBrowser(browser);
         dynamicLoadingPage = new DynamicLoadingPage();
-        dynamicLoadingPage.open(url + "/dynamic_loading/1");
+        dynamicLoadingPage.open();
     }
 
     @Test

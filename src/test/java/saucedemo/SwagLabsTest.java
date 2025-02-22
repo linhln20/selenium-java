@@ -15,12 +15,12 @@ import static supports.Browser.openBrowser;
 public class SwagLabsTest {
     SwagLabsPages swagLabsPages;
 
-    @Parameters({"browser", "url"})
+    @Parameters({"browser"})
     @BeforeMethod
-    void setUp(String browser, String url){
+    void setUp(String browser){
         openBrowser(browser);
         swagLabsPages = new SwagLabsPages();
-        swagLabsPages.open(url);
+        swagLabsPages.open();
     }
 
     @Test

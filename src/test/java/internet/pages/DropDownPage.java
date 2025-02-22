@@ -7,8 +7,8 @@ import supports.Browser;
 import static supports.Browser.visit;
 
 public class DropDownPage {
-    public void open(String url){
-        visit(url);
+    public void open(){
+        visit("https://the-internet.herokuapp.com/dropdown");
     }
 
     public void select(String option){

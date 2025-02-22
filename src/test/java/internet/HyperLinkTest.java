@@ -13,12 +13,12 @@ import static supports.Browser.openBrowser;
 
 public class HyperLinkTest {
     HyperLinkPage hyperlinkpage;
-    @Parameters({"browser", "url"})
+    @Parameters({"browser"})
     @BeforeMethod
-    void setUp(String browser, String url){
+    void setUp(String browser){
         openBrowser(browser);
         hyperlinkpage = new HyperLinkPage();
-        hyperlinkpage.open(url+"/status_codes");
+        hyperlinkpage.open();
     }
     @Test
      void hyperLink(){

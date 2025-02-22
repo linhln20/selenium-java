@@ -14,12 +14,12 @@ import static supports.Browser.openBrowser;
 public class JavaScriptAlertTest {
     JavaScriptAlertPage javaScriptAlertPage;
 
-    @Parameters({"browser", "url"})
+    @Parameters({"browser"})
     @BeforeMethod
-    void setUp(String browser, String url) {
+    void setUp(String browser) {
         openBrowser(browser);
         javaScriptAlertPage = new JavaScriptAlertPage();
-        javaScriptAlertPage.open(url + "/javascript_alerts");
+        javaScriptAlertPage.open();
     }
 
     @Test

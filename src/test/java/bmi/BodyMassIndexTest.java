@@ -18,13 +18,12 @@ public class BodyMassIndexTest {
                 {20, 165, 47, "female"}
         };
     }
-    @Parameters({"browser", "url"})
+    @Parameters({"browser"})
     @BeforeMethod
-    void setUp(String browser, String url){
+    void setUp(String browser){
         openBrowser(browser);
-        maximize();
         bodyMassIndexPage = new BodyMassIndexPage();
-        bodyMassIndexPage.open(url+"/bmi-calculator.html");
+        bodyMassIndexPage.open();
     }
 
     @Test (dataProvider = "bmiTestData")

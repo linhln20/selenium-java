@@ -7,7 +7,6 @@
 
     <test name="Chrome Browser headless">
         <parameter name="browser" value="chrome-headless"/>
-        <parameter name="url" value="https://www.saucedemo.com"/>
         <classes>
             <class name="saucedemo.SwagLabsTest"/>
         </classes>

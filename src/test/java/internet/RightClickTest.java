@@ -13,12 +13,12 @@ import static supports.Browser.openBrowser;
 public class RightClickTest {
     RightClickPage rightClickPage;
 
-    @Parameters({"browser", "url"})
+    @Parameters({"browser"})
     @BeforeMethod
-    void setUp(String browser, String url){
+    void setUp(String browser){
         openBrowser(browser);
         rightClickPage = new RightClickPage();
-        rightClickPage.open(url+"/context_menu");
+        rightClickPage.open();
     }
 
     @Test
