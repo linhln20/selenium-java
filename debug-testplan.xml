@@ -1,0 +1,14 @@
+<suite name="BMI">
+    <groups>
+        <run>
+            <exclude name="wip"/>
+        </run>
+    </groups>
+    <test name="BMI test">
+        <parameter name="browser" value="chrome-headless"/>
+        <classes>
+            <class name="bmi.BodyMassIndexTest"/>
+        </classes>
+    </test>
+
+</suite>

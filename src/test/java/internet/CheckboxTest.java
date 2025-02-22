@@ -17,7 +17,7 @@ public class CheckboxTest {
 
     @Parameters({"browser"})
     @BeforeMethod
-    void setUp(String browser, String url){
+    void setUp(String browser){
         openBrowser(browser);
          checkboxPage = new CheckboxPage();
          checkboxPage.open();

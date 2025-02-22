@@ -7,7 +7,7 @@ import static supports.Browser.visit;
 
 public class BodyMassIndexPage {
     private By metricTab = By.cssSelector("li#menuon a");
-        private By ageTextBox = By.cssSelector("input#cage");
+    private By ageTextBox = By.cssSelector("input#cage");
     private By maleRadioButton = By.cssSelector("td label.cbcontainer:first-child");
     private By femaleRadioButton = By.cssSelector("td label.cbcontainer:last-child");
     private By heightTextBox = By.cssSelector("input#cheightmeter");
@@ -15,12 +15,12 @@ public class BodyMassIndexPage {
     private By calculateButton = By.xpath("//input[@type='submit' and @value='Calculate']");
     private By resultLabel = By.cssSelector(".rightresult .bigtext b");
 
-    public void open(){
+    public void open() {
 //        Browser.clearBrowserCache();
         visit("https://www.calculator.net/bmi-calculator.html");
     }
 
-    public void selectMetricUnit(){ //    Select metric unit tab
+    public void selectMetricUnit() { //    Select metric unit tab
         Browser.clickBtn(metricTab);
     }
 
@@ -37,7 +37,7 @@ public class BodyMassIndexPage {
         Browser.fill(weightTextBox, String.valueOf(weight));
     }
 
-    public void clickCalculateBtn(){
+    public void clickCalculateBtn() {
         Browser.initializeWait(1);
         Browser.clickBtn(calculateButton);
     }
