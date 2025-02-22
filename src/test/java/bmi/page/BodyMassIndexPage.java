@@ -17,7 +17,7 @@ public class BodyMassIndexPage {
 
     public void open() {
 //        Browser.clearBrowserCache();
-        visit("https://www.calculator.net/bmi-calculator.html");
+        visit("https://www.calculator.net/bmi-calculator");
     }
 
     public void selectMetricUnit() { //    Select metric unit tab
