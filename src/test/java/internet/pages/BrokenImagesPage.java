@@ -6,7 +6,7 @@ import static supports.Browser.*;
 
 public class BrokenImagesPage {
     public void open(){
-        visit(Util.getBaseUrl()+"/broken_images");
+        visit("https://the-internet.herokuapp.com/broken_images");
     }
 
     public boolean isImagesBroken(By locator){
