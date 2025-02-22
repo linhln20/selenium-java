@@ -8,17 +8,9 @@ import org.testng.annotations.*;
 import supports.Browser;
 
 import static supports.Browser.openBrowser;
-import static supports.Browser.quit;
 
-public class BrokenImagesTest { //chay bang file xml
+public class BrokenImagesTest {
     BrokenImagesPage brokenImagesPage;
-
-    @DataProvider
-    Object[][] verifyBrokenImage() {
-        return new Object[][]{
-                {"//div/img"},
-        };
-    }
 
     @Parameters({"browser"})
     @BeforeMethod
@@ -28,10 +20,10 @@ public class BrokenImagesTest { //chay bang file xml
         brokenImagesPage.open();
     }
 
-    @Test(dataProvider = "verifyBrokenImage")
-    void verifyBrokenImage(String locator) {
+    @Test
+    void verifyBrokenImage() {
         Assert.assertTrue(brokenImagesPage
-                .isImagesBroken(By.xpath(locator)));
+                .isImagesBroken(By.xpath("//div/img")));
     }
 
     @AfterMethod
