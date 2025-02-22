@@ -2,7 +2,6 @@ package internet.pages;
 
 import org.openqa.selenium.By;
 import supports.Browser;
-
 import static supports.Browser.visit;
 
 public class JavaScriptAlertPage {

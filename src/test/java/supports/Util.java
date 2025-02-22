@@ -16,19 +16,17 @@ public class Util {
     }
 
     public static void main(String[] args) {
-        String filePath = "D:\\AK47 Automation\\AK47\\src\\test\\resources\\enviroment.properties"; // Update this path as needed
+        String filePath = "D:\\AK47 Automation\\AK47\\src\\test\\resources\\enviroment.properties";
         Properties properties = readPropertiesFile(filePath);
 
-        // Example: Retrieve a property value
         String value = properties.getProperty("base_url", "DefaultValue");
         System.out.println("Property Value: " + value);
     }
 
     public static String getBaseUrl(){
-        String filePath = "D:\\AK47 Automation\\AK47\\src\\test\\resources\\enviroment.properties"; // Update this path as needed
+        String filePath = "D:\\AK47 Automation\\AK47\\src\\test\\resources\\enviroment.properties";
         Properties properties = readPropertiesFile(filePath);
 
-        // Example: Retrieve a property value
         return properties.getProperty("base_url", "DefaultValue");
     }
 }

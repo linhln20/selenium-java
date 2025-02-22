@@ -21,6 +21,7 @@ public class DragDropTest {
         dragDropElementsPage = new DragDropElementsPage();
         dragDropElementsPage.open();
     }
+
     @Test
     void dragDropElements(){
         dragDropElementsPage.dragDrop();
@@ -33,6 +34,7 @@ public class DragDropTest {
         Assert.assertEquals(dragDropElementsPage.getSource(),"B");
         Assert.assertEquals(dragDropElementsPage.getTarget(),"A");
     }
+
     @AfterMethod
     void tearDown(ITestResult testResult){
         if(testResult.isSuccess()){

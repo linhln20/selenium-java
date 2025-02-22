@@ -14,7 +14,7 @@ public class BrokenImagesTest { //chay bang file xml
     BrokenImagesPage brokenImagesPage;
 
     @DataProvider
-    Object[][] verifyBrokenImage(){
+    Object[][] verifyBrokenImage() {
         return new Object[][]{
                 {"//div/img"},
         };
@@ -22,21 +22,21 @@ public class BrokenImagesTest { //chay bang file xml
 
     @Parameters({"browser"})
     @BeforeMethod
-    void setup(String browser){
+    void setup(String browser) {
         openBrowser(browser);
         brokenImagesPage = new BrokenImagesPage();
         brokenImagesPage.open();
     }
 
-    @Test (dataProvider ="verifyBrokenImage")
+    @Test(dataProvider = "verifyBrokenImage")
     void verifyBrokenImage(String locator) {
         Assert.assertTrue(brokenImagesPage
                 .isImagesBroken(By.xpath(locator)));
     }
 
     @AfterMethod
-    void tearDown(ITestResult testResult){
-        if(testResult.isSuccess()){
+    void tearDown(ITestResult testResult) {
+        if (testResult.isSuccess()) {
             Browser.captureScreen(testResult.getName());
         }
         Browser.quit();

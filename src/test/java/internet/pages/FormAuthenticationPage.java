@@ -15,7 +15,7 @@ public class FormAuthenticationPage {
 
     public void login(String username, String password){
         fill(usernameTxt,username);
-        fill(passwordTxt,password); //phair cos static moi cho thay tham so
+        fill(passwordTxt,password);
         click(loginBtn);
     }
 

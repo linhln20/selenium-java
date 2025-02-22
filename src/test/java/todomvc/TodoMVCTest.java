@@ -43,7 +43,7 @@ public class TodoMVCTest {
     void verifyUserAbleDeleteATodo() {
         todoMVCPage.fill(taskName);
 
-        todoMVCPage.deleteTodo();
+        todoMVCPage.deleteTodoByName();
         Assert.assertFalse(todoMVCPage.isTaskExit(taskName));
     }
 

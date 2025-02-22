@@ -24,7 +24,7 @@ public class TodoMVCPage {
     }
 
     public String getTodoName(String taskName) {
-        List<WebElement> taskList = Browser.getList(By.cssSelector(".todo-list li label"));
+        List<WebElement> taskList = Browser.getList(By.cssSelector(".todo-list li"));
         for (WebElement task : taskList) {
             if (task.getText().trim().equals(taskName)) {
                 return task.getText().trim();
@@ -41,7 +41,7 @@ public class TodoMVCPage {
         return Browser.isSelected(By.cssSelector(".todo-list li.completed .toggle"));
     }
 
-    public void deleteTodo(){
+    public void deleteTodoByName(){
         WebElement element = Browser.getElement(By.cssSelector(".todo-list li label"));
             Browser.hover(element);
         Browser.clickBtn(By.cssSelector(".todo-list li .destroy"));

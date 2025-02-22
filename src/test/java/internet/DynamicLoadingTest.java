@@ -29,7 +29,6 @@ public class DynamicLoadingTest {
         dynamicLoadingPage.waitLoad();
 
         Assert.assertEquals(dynamicLoadingPage.getText(), "Hello World!");
-
     }
 
     @Test

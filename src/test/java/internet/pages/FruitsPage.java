@@ -10,11 +10,12 @@ import supports.Browser;
 public class FruitsPage {
     public static Select select;
     public FruitsPage(){
-//        select = new Select(Browser.getElement(By.id("fruits")));
     }
+
     public void open(){
         Browser.visit("https://output.jsbin.com/osebed/2");
     }
+
     public FruitsPage select(String option){
         select.selectByVisibleText(option);
         return this;

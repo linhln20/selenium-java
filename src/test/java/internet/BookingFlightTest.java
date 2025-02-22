@@ -7,12 +7,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class BookingFlightTest {
-    /**
-     * Open Chrome
-     * Navigate https://www.vietnamairlines.com/vn/en/home
-     * Select Depart date is 10/1/2025
-     * Verify Depart Date value is 10/1/2025
-     */
 
     @Test (groups = {"wip"})
     void verifyAbleSelectDepartDate1(){

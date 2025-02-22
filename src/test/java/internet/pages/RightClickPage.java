@@ -3,7 +3,6 @@ package internet.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.Actions;
 import supports.Browser;
-
 import static supports.Browser.visit;
 
 public class RightClickPage {

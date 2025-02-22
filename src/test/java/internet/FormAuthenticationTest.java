@@ -8,6 +8,7 @@ import static supports.Browser.*;
 
 public class FormAuthenticationTest {
     FormAuthenticationPage formAuthenticationPage;
+
     @DataProvider
     Object[][] testData(){
         return new Object[][]{
@@ -18,6 +19,7 @@ public class FormAuthenticationTest {
                 {"tomsmith","SuperSecretPassword","https://the-internet.herokuapp.com/login","error","Your password is invalid!"},
         };
     }
+
     @Parameters({"browser"})
     @BeforeMethod
     void setup(String browser) {
@@ -34,9 +36,8 @@ public class FormAuthenticationTest {
         Assert.assertTrue(formAuthenticationPage
                 .getMessage(expectedMessageType)
                 .contains(expectedMessageContent));
-//      Assert.assertTrue(driver.findElement(By.className(expectedMessageType)).getText().contains(expectedMessageContent));
-
     }
+
     @AfterMethod
     void tearDown(ITestResult iTestResult){
         if(!iTestResult.isSuccess()){

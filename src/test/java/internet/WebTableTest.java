@@ -8,7 +8,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import supports.Browser;
-
 import java.util.List;
 
 import static supports.Browser.openBrowser;

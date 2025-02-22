@@ -10,7 +10,6 @@ import internet.pages.CheckboxPage;
 import supports.Browser;
 
 import static supports.Browser.openBrowser;
-import static supports.Browser.quit;
 
 public class CheckboxTest {
     CheckboxPage checkboxPage;

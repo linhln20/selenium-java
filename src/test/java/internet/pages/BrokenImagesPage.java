@@ -2,7 +2,6 @@ package internet.pages;
 
 import org.openqa.selenium.By;
 import supports.Util;
-
 import static supports.Browser.*;
 
 public class BrokenImagesPage {
