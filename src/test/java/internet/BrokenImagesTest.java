@@ -14,7 +14,7 @@ public class BrokenImagesTest {
 
     @Parameters({"browser"})
     @BeforeMethod
-    void setup(String browser) {
+    void setUp(String browser) {
         openBrowser(browser);
         brokenImagesPage = new BrokenImagesPage();
         brokenImagesPage.open();
