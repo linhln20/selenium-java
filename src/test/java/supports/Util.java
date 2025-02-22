@@ -16,7 +16,7 @@ public class Util {
     }
 
     public static void main(String[] args) {
-        String filePath = "D:\\AK47 Automation\\AK47\\src\\test\\resources\\enviroment.properties";
+        String filePath = "D:\\AK47 Automation\\AK47\\src\\test\\resources\\environment.properties";
         Properties properties = readPropertiesFile(filePath);
 
         String value = properties.getProperty("base_url", "DefaultValue");
@@ -24,7 +24,7 @@ public class Util {
     }
 
     public static String getBaseUrl(){
-        String filePath = "D:\\AK47 Automation\\AK47\\src\\test\\resources\\enviroment.properties";
+        String filePath = "D:\\AK47 Automation\\AK47\\src\\test\\resources\\environment.properties";
         Properties properties = readPropertiesFile(filePath);
 
         return properties.getProperty("base_url", "DefaultValue");

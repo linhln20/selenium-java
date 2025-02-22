@@ -8,9 +8,11 @@ public class BrokenImagesPage {
     public void open(){
         visit(Util.getBaseUrl()+"/broken_images");
     }
+
     public boolean isImagesBroken(By locator){
         return isBroken(locator);
     }
+
     public static boolean isBroken(By locator){
         int[] dimensions = getImageProperty(locator);
         if (dimensions[0] == 0 && dimensions[1] == 0) {
