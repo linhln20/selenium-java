@@ -8,7 +8,7 @@ import static supports.Browser.visit;
 
 public class BasicAuthenticationPage {
     public void open() {
-        visit("https://the-internet.herokuapp.com/basic_auth");
+        visit("https://admin:admin@the-internet.herokuapp.com/basic_auth");
     }
 
     public String getMessage() {

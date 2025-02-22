@@ -11,12 +11,6 @@ import static supports.Browser.openBrowser;
 
 public class BasicAuthenticationTest {
     BasicAuthenticationPage basicAuthenticationPage;
-    @DataProvider
-    public Object[][] loginMessage(){
-        return new Object[][]{
-            {"Congratulations! You must have the proper credentials."}
-        };
-    }
     @Parameters({"browser"})
     @BeforeMethod
     void setUp(String browser){
@@ -25,12 +19,12 @@ public class BasicAuthenticationTest {
         basicAuthenticationPage.open();
     }
 
-    @Test (dataProvider = "loginMessage")
-    void loginSuccess(String expectedMessageContent){
+    @Test
+    void loginSuccess(){
 
         Assert.assertTrue(basicAuthenticationPage
                 .getMessage()
-                        .contains(expectedMessageContent));
+                        .contains("Congratulations! You must have the proper credentials."));
                 }
 
 }
