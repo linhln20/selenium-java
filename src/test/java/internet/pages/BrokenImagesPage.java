@@ -1,11 +1,13 @@
 package internet.pages;
 
 import org.openqa.selenium.By;
+import supports.Util;
+
 import static supports.Browser.*;
 
 public class BrokenImagesPage {
     public void open(){
-        visit("https://the-internet.herokuapp.com/broken_images");
+        visit(Util.getBaseUrl()+"/broken_images");
     }
     public boolean isImagesBroken(By locator){
         return isBroken(locator);
