@@ -25,6 +25,7 @@ public class BodyMassIndexTest {
         openBrowser(browser);
         bodyMassIndexPage = new BodyMassIndexPage();
         bodyMassIndexPage.open();
+        bodyMassIndexPage.selectMetricUnit();
     }
 
     @Test(dataProvider = "bmiTestData")

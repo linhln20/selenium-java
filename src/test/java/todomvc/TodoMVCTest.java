@@ -42,9 +42,12 @@ public class TodoMVCTest {
     @Test
     void verifyUserAbleDeleteATodo() {
         todoMVCPage.fill(taskName);
+        int taskSizeBefore= todoMVCPage.getSize();
 
         todoMVCPage.deleteTodoByName();
+        int currentTaskSize= todoMVCPage.getSize();
         Assert.assertFalse(todoMVCPage.isTaskExit(taskName));
+        Assert.assertEquals(taskSizeBefore-currentTaskSize,1);
     }
 
     @AfterMethod

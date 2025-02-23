@@ -180,6 +180,10 @@ public class Browser {
         return driver.findElements(locator);
     }
 
+    public static int getSize(By locator){
+       return driver.findElements(locator).size();
+    }
+
     public static void hover(WebElement element) {
         new Actions(driver).moveToElement(element).perform();
     }

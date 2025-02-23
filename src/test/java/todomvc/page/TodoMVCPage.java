@@ -32,6 +32,9 @@ public class TodoMVCPage {
         }
         return null;
     }
+    public int getSize(){
+        return Browser.getSize(By.cssSelector(".todo-list li"));
+    }
 
     public void markAsCompleted(){
         Browser.clickCheckBox(By.cssSelector(".todo-list li .toggle"));
