@@ -23,15 +23,6 @@ public class TodoMVCPage {
         return taskList.stream().anyMatch(task -> task.getText().contains(taskName));
     }
 
-    public String getTodoName(String taskName) {
-        List<WebElement> taskList = Browser.getList(By.cssSelector(".todo-list li"));
-        for (WebElement task : taskList) {
-            if (task.getText().trim().equals(taskName)) {
-                return task.getText().trim();
-            }
-        }
-        return null;
-    }
     public int getSize(){
         return Browser.getSize(By.cssSelector(".todo-list li"));
     }

@@ -233,4 +233,5 @@ public class Browser {
     public static void visit(String url){
         driver.get(url);
     }
+
 }

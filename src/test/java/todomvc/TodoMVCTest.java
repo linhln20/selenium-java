@@ -25,9 +25,11 @@ public class TodoMVCTest {
 
     @Test
     void createNewTodo() {
+        int taskSizeBefore= todoMVCPage.getSize();
         todoMVCPage.fill(taskName);
 
-        Assert.assertEquals(todoMVCPage.getTodoName(taskName), taskName);
+        int currentTaskSize= todoMVCPage.getSize();
+        Assert.assertEquals(currentTaskSize-taskSizeBefore,1);
         Assert.assertTrue(todoMVCPage.isTaskExit(taskName));
     }
 
