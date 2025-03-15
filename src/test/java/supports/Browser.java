@@ -196,6 +196,7 @@ public class Browser {
         return driver.findElement(locator).isSelected();
     }
 
+
     public static void maximize(){
         driver.manage().window().maximize();
     }
@@ -228,6 +229,10 @@ public class Browser {
     }
     public static void sentText(By locator, String text){
     driver.findElement(locator).sendKeys(text);
+    }
+
+    public static void reloadPage(){
+        driver.navigate().refresh();
     }
 
     public static void visit(String url){
