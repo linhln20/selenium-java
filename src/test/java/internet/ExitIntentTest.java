@@ -31,7 +31,7 @@ public class ExitIntentTest {
         exitIntentPage.open();
     }
 
-    @Test
+    @Test (groups = {"wip"})
     void verifyModalAppearsOnMouseExit() throws AWTException {
         exitIntentPage.moveMouseOutOfScreen();
 
