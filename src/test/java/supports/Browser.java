@@ -18,6 +18,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.Duration;
+import java.time.Instant;
 import java.util.List;
 
 
@@ -26,13 +27,13 @@ public class Browser {
     public static WebDriverWait wait;
 
     public static void openBrowser(String browser) {
-        Path userDataPath = Paths.get(System.getProperty("java.io.tmpdir"), "browser-user-data");
-        if (!Files.exists(userDataPath)) {
-            try {
-                Files.createDirectory(userDataPath);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+        String uniqueDir = "browser-user-data-" + Instant.now().toEpochMilli();
+        Path userDataPath = Paths.get(System.getProperty("java.io.tmpdir"), uniqueDir);
+
+        try {
+            Files.createDirectories(userDataPath);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
         switch (browser.toLowerCase()) {
@@ -40,8 +41,7 @@ public class Browser {
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--headless=new");
                 options.addArguments("--user-data-dir=" + userDataPath.toAbsolutePath());
-                options.addArguments("--disable-dev-shm-usage");
-                options.addArguments("--no-sandbox");
+                options.addArguments("--disable-gpu", "--no-sandbox", "--disable-dev-shm-usage", "--remote-debugging-port=0");
                 driver = new ChromeDriver(options);
                 break;
             }
@@ -67,6 +67,7 @@ public class Browser {
                 EdgeOptions options = new EdgeOptions();
                 options.addArguments("--headless");
                 options.addArguments("--user-data-dir=" + userDataPath.toAbsolutePath());
+                options.addArguments("--disable-gpu", "--no-sandbox", "--disable-dev-shm-usage", "--remote-debugging-port=0");
                 driver = new EdgeDriver(options);
                 break;
             }
@@ -77,7 +78,7 @@ public class Browser {
                 break;
             }
             default:
-                throw new IllegalArgumentException("Unsupported browsers: " + browser);
+                throw new IllegalArgumentException("Trình duyệt không được hỗ trợ: " + browser);
         }
 
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
