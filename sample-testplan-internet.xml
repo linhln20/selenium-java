@@ -24,7 +24,8 @@
 <!--            <class name="internet.ScrollDownTest"/>-->
 <!--            <class name="internet.WebTableTest"/>-->
 <!--            <class name="internet.BasicAuthenticationTest"/>-->
-            <class name="internet.DynamicFormSubmissionTest"/>
+<!--            <class name="internet.DynamicFormSubmissionTest"/>-->
+            <class name="internet.AddOrRemoveElementsTest"/>
         </classes>
     </test>
 </suite>
