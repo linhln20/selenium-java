@@ -14,11 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.time.Duration;
-import java.time.Instant;
 import java.util.List;
 
 
@@ -26,61 +22,39 @@ public class Browser {
     private static WebDriver driver;
     public static WebDriverWait wait;
 
-    public static void openBrowser(String browser) {
-        String uniqueDir = "browser-user-data-" + Instant.now().toEpochMilli();
-        Path userDataPath = Paths.get(System.getProperty("java.io.tmpdir"), uniqueDir);
-
-        try {
-            Files.createDirectories(userDataPath);
-        } catch (Exception e) {
-            e.printStackTrace();
+    public static void openBrowser(String browser){
+        switch (browser.toLowerCase()){
+            case "chrome-headless":{
+                ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.addArguments("--headless=new");
+                driver = new ChromeDriver(chromeOptions);
+                break;
+            }
+            case "chrome":{
+                driver = new ChromeDriver();
+                break;
+            }
+            case "firefox":{
+                driver = new FirefoxDriver();
+                break;
+            }
+            case "firefox-headless":{
+                FirefoxOptions firefoxOptions = new FirefoxOptions();
+                firefoxOptions.addArguments("--headless");
+                driver = new FirefoxDriver();
+                break;
+            }
+            case "edge":{
+                driver = new EdgeDriver();
+                break;
+            }
+            case "edge-headless":{
+                EdgeOptions edgeOptions = new EdgeOptions();
+                edgeOptions.addArguments("--headless");
+                driver = new EdgeDriver();
+                break;
+            }
         }
-
-        switch (browser.toLowerCase()) {
-            case "chrome-headless": {
-                ChromeOptions options = new ChromeOptions();
-                options.addArguments("--headless=new");
-                options.addArguments("--user-data-dir=" + userDataPath.toAbsolutePath());
-                options.addArguments("--disable-gpu", "--no-sandbox", "--disable-dev-shm-usage", "--remote-debugging-port=0");
-                driver = new ChromeDriver(options);
-                break;
-            }
-            case "chrome": {
-                ChromeOptions options = new ChromeOptions();
-                options.addArguments("--user-data-dir=" + userDataPath.toAbsolutePath());
-                driver = new ChromeDriver(options);
-                break;
-            }
-            case "firefox-headless": {
-                FirefoxOptions options = new FirefoxOptions();
-                options.addArguments("--headless");
-                driver = new FirefoxDriver(options);
-                break;
-            }
-            case "firefox": {
-                FirefoxOptions options = new FirefoxOptions();
-                options.addArguments("-profile", userDataPath.toAbsolutePath().toString());
-                driver = new FirefoxDriver(options);
-                break;
-            }
-            case "edge-headless": {
-                EdgeOptions options = new EdgeOptions();
-                options.addArguments("--headless");
-                options.addArguments("--user-data-dir=" + userDataPath.toAbsolutePath());
-                options.addArguments("--disable-gpu", "--no-sandbox", "--disable-dev-shm-usage", "--remote-debugging-port=0");
-                driver = new EdgeDriver(options);
-                break;
-            }
-            case "edge": {
-                EdgeOptions options = new EdgeOptions();
-                options.addArguments("--user-data-dir=" + userDataPath.toAbsolutePath());
-                driver = new EdgeDriver(options);
-                break;
-            }
-            default:
-                throw new IllegalArgumentException("Trình duyệt không được hỗ trợ: " + browser);
-        }
-
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
