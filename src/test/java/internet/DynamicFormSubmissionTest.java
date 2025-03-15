@@ -22,12 +22,41 @@ public class DynamicFormSubmissionTest {
     }
 
     @Test
-    void verifyAbleSelectACheckBox(){
+    void verifyRemoveACheckBox(){
         dynamicFormSubmissionPage.CheckCheckbox();
         dynamicFormSubmissionPage.clickRemoveButton();
         String message = dynamicFormSubmissionPage.getMessage();
 
         Assert.assertEquals(message, "It's gone!");
+    }
+
+    @Test
+    void verifyAddACheckBox(){
+        dynamicFormSubmissionPage.CheckCheckbox();
+        dynamicFormSubmissionPage.clickRemoveButton();
+        dynamicFormSubmissionPage.clickAddButton();
+
+        String message = dynamicFormSubmissionPage.getMessage();
+
+        Assert.assertEquals(message, "It's back!");
+    }
+
+    @Test
+    void verifyEnableButton(){
+        dynamicFormSubmissionPage.clickEnableBtn();
+        String message = dynamicFormSubmissionPage.getMessage();
+
+        Assert.assertEquals(message, "It's enabled!");
+    }
+
+    @Test
+    void verifyDisableButton(){
+        dynamicFormSubmissionPage.clickEnableBtn();
+        dynamicFormSubmissionPage.clickDisableBtn();
+        String message = dynamicFormSubmissionPage.getMessage();
+
+
+        Assert.assertEquals(message, "It's disabled!");
     }
 
     @AfterMethod

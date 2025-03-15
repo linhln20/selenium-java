@@ -26,6 +26,10 @@ mvn clean test
   - It does not work on Git because the function moves the mouse target is disabled (the target only changes to "5" if the mouse is moved after slid)
 - [Able Select Multiple Options](src/test/java/internet/DropDownTest.java)
   - Can not double-click to deselect, just press the key "Ctrl" and select at the same moment
+- [Dynamic Form Submission](src/test/java/internet/DynamicFormSubmissionTest.java)
+  - Conflict with TodoMVCTest and SwagLabsTest 
+  -> Only can run alone
+  - Need wait time to assert test
 
 ## Supports
 -  Selenium Owner methods# automation-test
