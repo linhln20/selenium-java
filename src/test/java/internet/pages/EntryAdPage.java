@@ -22,6 +22,7 @@ public class EntryAdPage {
     }
 
     public boolean isModalClose(){
+        Browser.wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("content")));
        return getElement(By.id("modal")).getCssValue("display").equals("none");
     }
 }
