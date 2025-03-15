@@ -20,13 +20,16 @@
 <!--            <class name="internet.JavaScriptAlertTest"/>-->
 <!--            <class name="internet.KeyPressTest"/>-->
 <!--            <class name="internet.NestedFrameTest"/>-->
-<!--            <class name="internet.RightClickTest"/>-->
 <!--            <class name="internet.ScrollDownTest"/>-->
 <!--            <class name="internet.WebTableTest"/>-->
 <!--            <class name="internet.BasicAuthenticationTest"/>-->
 <!--            <class name="internet.DynamicFormSubmissionTest"/>-->
 <!--            <class name="internet.AddOrRemoveElementsTest"/>-->
-            <class name="internet.ContextMenuTest"/>
+<!--            <class name="internet.ContextMenuTest"/>-->
+            <class name="internet.DigestAuthTest"/>
+<!--            <class name="internet."/>-->
+<!--            <class name="internet."/>-->
+<!--            <class name="internet."/>-->
         </classes>
     </test>
 </suite>
