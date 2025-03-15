@@ -5,7 +5,7 @@
         </run>
     </groups>
     <test name="Chrome Browser headless">
-        <parameter name="browser" value="chrome-headless"/>
+        <parameter name="browser" value="chrome"/>
         <classes>
             <!--            <class name="internet.BookingFlightTest"/>-->
             <!--            <class name="internet.BrokenImagesTest"/>-->
@@ -29,8 +29,8 @@
             <!--            <class name="internet.DigestAuthTest"/>-->
             <!--            <class name="internet.DisappearingElementsTest"/>-->
             <!--            <class name="internet.DynamicContentTest"/>-->
-                        <class name="internet.EntryAdTest"/>
-            <!--            <class name="internet."/>-->
+<!--                        <class name="internet.EntryAdTest"/>-->
+                        <class name="internet.ExitIntentTest"/>
             <!--            <class name="internet."/>-->
             <!--            <class name="internet."/>-->
             <!--            <class name="internet."/>-->
