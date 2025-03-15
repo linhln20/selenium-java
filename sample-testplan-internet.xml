@@ -26,8 +26,8 @@
 <!--            <class name="internet.DynamicFormSubmissionTest"/>-->
 <!--            <class name="internet.AddOrRemoveElementsTest"/>-->
 <!--            <class name="internet.ContextMenuTest"/>-->
-            <class name="internet.DigestAuthTest"/>
-<!--            <class name="internet."/>-->
+<!--            <class name="internet.DigestAuthTest"/>-->
+            <class name="internet.DisappearingElementsTest"/>
 <!--            <class name="internet."/>-->
 <!--            <class name="internet."/>-->
         </classes>
