@@ -12,7 +12,7 @@
             <!--            <class name="internet.CheckboxTest"/>-->
             <!--            <class name="internet.DragDropTest"/>-->
             <!--            <class name="internet.DropDownTest"/>-->
-                        <class name="internet.DynamicLoadingTest"/>
+<!--                        <class name="internet.DynamicLoadingTest"/>-->
             <!--            <class name="internet.FormAuthenticationTest"/>-->
             <!--            <class name="internet.HorizontalSliderTest"/>-->
             <!--            <class name="internet.HoverTest"/>-->
@@ -29,7 +29,7 @@
             <!--            <class name="internet.DigestAuthTest"/>-->
             <!--            <class name="internet.DisappearingElementsTest"/>-->
             <!--            <class name="internet.DynamicContentTest"/>-->
-            <!--            <class name="internet."/>-->
+                        <class name="internet.EntryAdTest"/>
             <!--            <class name="internet."/>-->
             <!--            <class name="internet."/>-->
             <!--            <class name="internet."/>-->
