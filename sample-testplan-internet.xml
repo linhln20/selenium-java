@@ -25,7 +25,8 @@
 <!--            <class name="internet.WebTableTest"/>-->
 <!--            <class name="internet.BasicAuthenticationTest"/>-->
 <!--            <class name="internet.DynamicFormSubmissionTest"/>-->
-            <class name="internet.AddOrRemoveElementsTest"/>
+<!--            <class name="internet.AddOrRemoveElementsTest"/>-->
+            <class name="internet.ContextMenuTest"/>
         </classes>
     </test>
 </suite>
