@@ -14,6 +14,6 @@ public class DynamicContentPage {
     }
 
     public String getContent(){
-       return getElement(By.xpath("//div[@id='content']/div[2]")).getText();
+       return getElement(By.id("content")).getText();
     }
 }

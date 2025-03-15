@@ -8,8 +8,12 @@ import static supports.Browser.visit;
 
 public class DynamicLoadingPage {
     private static By goal = By.id("finish");
-    public void open(){
+    public void openExp1(){
        visit("https://the-internet.herokuapp.com/dynamic_loading/1");
+    }
+
+    public void openExp2(){
+        visit("https://the-internet.herokuapp.com/dynamic_loading/2");
     }
 
     public void click(){

@@ -20,11 +20,12 @@ public class DynamicLoadingTest {
     void setup(String browser) {
         openBrowser(browser);
         dynamicLoadingPage = new DynamicLoadingPage();
-        dynamicLoadingPage.open();
+
     }
 
     @Test
-    void dynamicLoading() throws InterruptedException {
+    void ElementIsHidden() throws InterruptedException {
+        dynamicLoadingPage.openExp1();
         dynamicLoadingPage.click();
         dynamicLoadingPage.waitLoad();
 
@@ -32,10 +33,10 @@ public class DynamicLoadingTest {
     }
 
     @Test
-    void dynamicLoadingB() {
+    void ElementRenderedAfterTheFact(){
+        dynamicLoadingPage.openExp2();
         dynamicLoadingPage.click();
-        dynamicLoadingPage.waitLoadB();
-
+        dynamicLoadingPage.waitLoad();
         Assert.assertEquals(dynamicLoadingPage.getText(), "Hello World!");
     }
 
