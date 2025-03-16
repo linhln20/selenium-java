@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 import supports.Browser;
 
 import static supports.Browser.openBrowser;
+import static supports.Browser.quit;
 
 public class ContextMenuTest {
     ContextMenuPage contextMenuPage;
@@ -29,10 +30,7 @@ public class ContextMenuTest {
     }
 
     @AfterMethod
-    void tearDown(ITestResult testResult) {
-        if (testResult.isSuccess()) {
-            Browser.captureScreen(testResult.getName());
-        }
-        Browser.quit();
+    void tearDown() {
+        quit();
     }
 }
