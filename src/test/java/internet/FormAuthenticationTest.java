@@ -32,10 +32,10 @@ public class FormAuthenticationTest {
     void authenticationFormTest(String username,String password,String expectedUrl,String expectedMessageType,String expectedMessageContent) {
         formAuthenticationPage.login(username, password);
 
-        Assert.assertEquals(getCurrentUrl(),expectedUrl);
         Assert.assertTrue(formAuthenticationPage
                 .getMessage(expectedMessageType)
                 .contains(expectedMessageContent));
+        Assert.assertEquals(getCurrentUrl(),expectedUrl);
     }
 
     @AfterMethod

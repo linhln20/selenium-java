@@ -1,6 +1,9 @@
 package internet.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import supports.Browser;
+
 import static supports.Browser.*;
 
 
@@ -20,6 +23,7 @@ public class FormAuthenticationPage {
     }
 
     public String getMessage(String expectedMessageType){
+        Browser.wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("flash")));
         return getText(By.className(expectedMessageType));
         }
     }
