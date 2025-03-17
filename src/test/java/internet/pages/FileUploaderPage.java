@@ -1,16 +1,15 @@
 package internet.pages;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
 import supports.Browser;
 
-import java.nio.file.Paths;
+import java.io.File;
 import java.time.Duration;
 
 import static supports.Browser.*;
 
 public class FileUploaderPage {
-    String filePath = "C:\\Users\\lamng\\Desktop\\test-file.docx";
+    String filePath = new File(System.getProperty("user.dir") + "/src/test/resources/test-file.txt").getAbsolutePath();
 
     public void open(){
         visit("https://the-internet.herokuapp.com/upload");
@@ -24,22 +23,18 @@ public class FileUploaderPage {
     }
 
     public void uploadByClickDragDrop() {
-        getElement(By.cssSelector("#drag-drop-upload")).click();
         WebElement uploadInput = getElement(By.xpath("//*[@id='drag-drop-upload']"));
-
+        executeScript(uploadInput, "arguments[0].style.display = 'block';");
         uploadInput.sendKeys(filePath);
-        Actions actions = new Actions(Browser.getDriver());
-        actions.keyDown(Keys.ENTER).perform();
     }
 
     public void uploadByDragAndDrop() {
         WebElement dropZone = getElement(By.id("drag-drop-upload"));
-
-        Actions actions = new Actions(Browser.getDriver());
-        actions.dragAndDrop((WebElement) Paths.get(filePath).toFile(), dropZone).perform();
+        executeScript(dropZone, "arguments[0].style.display = 'block';");
+        dropZone.sendKeys(filePath);
     }
 
     public boolean verifyUpload() {
-        return getElement(By.id("uploaded-files")).getText().contains("test-file.docx");
+        return getElement(By.id("uploaded-files")).getText().contains("test-file.txt");
     }
 }
