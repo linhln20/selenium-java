@@ -31,8 +31,8 @@
 <!--                        <class name="internet.DynamicContentTest"/>-->
 <!--                        <class name="internet.EntryAdTest"/>-->
 <!--                        <class name="internet.ExitIntentTest"/>-->
-                        <class name="internet.FileDownloaderTest"/>
-<!--                        <class name="internet."/>-->
+<!--                        <class name="internet.FileDownloaderTest"/>-->
+                        <class name="internet.FileUploaderTest"/>
 <!--                        <class name="internet."/>-->
 <!--                        <class name="internet."/>-->
 <!--                        <class name="internet."/>-->
