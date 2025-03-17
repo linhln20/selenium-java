@@ -33,8 +33,8 @@
 <!--                        <class name="internet.ExitIntentTest"/>-->
 <!--                        <class name="internet.FileDownloaderTest"/>-->
 <!--                        <class name="internet.FileUploaderTest"/>-->
-                        <class name="internet.FloatingMenuTest"/>
-<!--                        <class name="internet."/>-->
+<!--                        <class name="internet.FloatingMenuTest"/>-->
+                        <class name="internet.ForgotPasswordTest"/>
 <!--                        <class name="internet."/>-->
         </classes>
     </test>
