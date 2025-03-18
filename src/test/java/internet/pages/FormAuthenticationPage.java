@@ -17,8 +17,8 @@ public class FormAuthenticationPage {
     }
 
     public void login(String username, String password){
-        fill(usernameTxt,username);
-        fill(passwordTxt,password);
+        fill(usernameTxt);
+        fill(passwordTxt);
         click(loginBtn);
     }
 

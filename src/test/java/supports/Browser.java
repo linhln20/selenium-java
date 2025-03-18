@@ -140,10 +140,10 @@ public class Browser {
         js.executeScript(script, element);
     }
 
-    public static void fill(By locator, String text) {
+    public static void fill(By locator) {
         WebElement element = driver.findElement(locator);
         element.clear();
-        element.sendKeys(text);
+        element.sendKeys();
     }
 
     public static void fillInt(By locator, int text) {

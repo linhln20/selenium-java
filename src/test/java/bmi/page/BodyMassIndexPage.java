@@ -25,16 +25,16 @@ public class BodyMassIndexPage {
     }
 
     public void fillForm(int age, double height, double weight, String gender) {
-        Browser.fill(ageTextBox, String.valueOf(age));
+        Browser.fill(ageTextBox);
 
         if (gender.equalsIgnoreCase("male")) {
             Browser.clickBtn(maleRadioButton);
         } else {
             Browser.clickBtn(femaleRadioButton);
         }
-        Browser.fill(heightTextBox, String.valueOf(height));
+        Browser.fill(heightTextBox);
         Browser.initializeWait(1);
-        Browser.fill(weightTextBox, String.valueOf(weight));
+        Browser.fill(weightTextBox);
     }
 
     public void clickCalculateBtn() {
