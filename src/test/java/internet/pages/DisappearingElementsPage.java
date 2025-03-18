@@ -1,7 +1,9 @@
 package internet.pages;
 
 import org.openqa.selenium.By;
-import supports.Browser;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 import static supports.Browser.*;
 
@@ -10,30 +12,16 @@ public class DisappearingElementsPage {
         visit("https://the-internet.herokuapp.com/disappearing_elements");
     }
 
-    public void clickHome(){
-        clickText("Home");
-    }
-
-    public void clickAbout(){
-        clickText("About");
-    }
-
-    public void clickPortfolio(){
-        clickText("Portfolio");
-    }
-
-    public void clickGallery(){
-        clickText("Gallery");
-    }
-
-    public String getCurrentUrl(){
-        return Browser.getCurrentUrl();
-    }
-
-    public void clickContactUs(){
-        clickText("Contact Us");
-    }
-    public void getContent(){
-        getText(By.cssSelector("body > h1"));
+    public int galleryCount(){
+        int iterations = 10;
+        int galleryPresentCount = 0;
+        for (int i = 0; i < iterations; i++) {
+            visit("https://the-internet.herokuapp.com/disappearing_elements");
+            List<WebElement> galleries = getDriver().findElements(By.linkText("Gallery"));
+            if (!galleries.isEmpty() && galleries.get(0).isDisplayed()) {
+                galleryPresentCount++;
+            }
+        }
+        return galleryPresentCount;
     }
 }

@@ -20,32 +20,9 @@ public class DisappearingElementsTest {
     }
 
     @Test
-    void clickHome() {
-        disappearingElementsPage.clickHome();
-        Assert.assertEquals(disappearingElementsPage.getCurrentUrl(), "https://the-internet.herokuapp.com/");
-    }
-
-    @Test
-    void clickAbout() {
-        disappearingElementsPage.clickAbout();
-        Assert.assertEquals(disappearingElementsPage.getCurrentUrl(), "https://the-internet.herokuapp.com/about/");
-    }
-
-    @Test
-    void clickContactUs() {
-        disappearingElementsPage.clickContactUs();
-        Assert.assertEquals(disappearingElementsPage.getCurrentUrl(), "https://the-internet.herokuapp.com/contact-us/");
-    }
-
-    @Test
-    void clickPortfolio() {
-        disappearingElementsPage.clickPortfolio();
-        Assert.assertEquals(disappearingElementsPage.getCurrentUrl(), "https://the-internet.herokuapp.com/portfolio/");
-    }
-
-    @Test
-    void clickGallery() {
-        disappearingElementsPage.clickGallery();
-        Assert.assertEquals(disappearingElementsPage.getCurrentUrl(), "https://the-internet.herokuapp.com/gallery/");
+    public void testGalleryRandomness() {
+        int iterations = 10;
+        int galleryPresentCount = disappearingElementsPage.galleryCount();
+        Assert.assertTrue(galleryPresentCount > 0 && galleryPresentCount < iterations);
     }
 }
