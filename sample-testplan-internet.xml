@@ -29,9 +29,9 @@
 <!--                        <class name="internet.DigestAuthTest"/>-->
 <!--                        <class name="internet.DisappearingElementsTest"/>-->
 <!--                        <class name="internet.DynamicContentTest"/>-->
-                        <class name="internet.EntryAdTest"/>
+<!--                        <class name="internet.EntryAdTest"/>-->
 <!--                        <class name="internet.ExitIntentTest"/>-->
-<!--                        <class name="internet.FileDownloaderTest"/>-->
+                        <class name="internet.FileDownloaderTest"/>
 <!--                        <class name="internet.FileUploaderTest"/>-->
 <!--                        <class name="internet.FloatingMenuTest"/>-->
 <!--                        <class name="internet.ForgotPasswordTest"/>-->

@@ -111,7 +111,8 @@ public class Browser {
     }
 
     public static void clickText(String text) {
-        driver.findElement(By.linkText(text)).click();
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.linkText(text)));
+        element.click();
     }
 
     public static void captureScreen(String name){
