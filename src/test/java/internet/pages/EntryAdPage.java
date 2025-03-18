@@ -18,7 +18,7 @@ public class EntryAdPage {
     }
 
     public void closeModal(){
-        clickBtn(By.cssSelector("#modal > div.modal > div.modal-footer > p"));
+        clickBtn(By.xpath("//*[@id='modal']/div[2]/div[3]/p"));
     }
 
     public boolean isModalClose(){
