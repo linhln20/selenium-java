@@ -2,12 +2,10 @@ package internet;
 
 import internet.pages.InputsPage;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.ITestResult;
+import org.testng.annotations.*;
 
-import static supports.Browser.openBrowser;
+import static supports.Browser.*;
 
 public class InputsTest {
     InputsPage inputsPage;
@@ -53,5 +51,13 @@ public class InputsTest {
     void verifyInvalidNumber(String text, String expectedResult) {
         inputsPage.sendText(text);
         Assert.assertEquals(inputsPage.getNumberAfter(), expectedResult);
+    }
+
+    @AfterMethod
+    void tearDown(ITestResult iTestResult){
+        if(!iTestResult.isSuccess()){
+            captureScreen(iTestResult.getName());
+        }
+        quit();
     }
 }
