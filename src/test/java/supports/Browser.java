@@ -100,8 +100,14 @@ public class Browser {
         driver.findElement(locator).click();
     }
 
-    public static void clickBtn(By locator){
-        driver.findElement(locator).click();
+    public static void clickBtn(By locator) {
+        WebElement element = getElement(locator);
+        try {
+            element.click();
+        } catch (org.openqa.selenium.ElementClickInterceptedException e) {
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].click();", element);
+        }
     }
 
     public static void clickText(String text) {
