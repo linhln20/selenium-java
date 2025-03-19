@@ -23,7 +23,7 @@ public class FileDownloaderTest {
         fileDownloaderPage.open();
     }
 
-    @Test
+    @Test (groups = {"wip"})
     void downloaderFile() throws InterruptedException {
         fileDownloaderPage.clickDownloadFile();
         fileDownloaderPage.isFileDownload();
