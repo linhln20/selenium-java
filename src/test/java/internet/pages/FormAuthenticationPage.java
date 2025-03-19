@@ -17,8 +17,13 @@ public class FormAuthenticationPage {
     }
 
     public void login(String username, String password){
-        fill(usernameTxt);
-        fill(passwordTxt);
+        if (username != null && !username.isEmpty()) {
+            fill(usernameTxt, username);
+        }
+
+        if (password != null && !password.isEmpty()) {
+            fill(passwordTxt, password);
+        }
         click(loginBtn);
     }
 

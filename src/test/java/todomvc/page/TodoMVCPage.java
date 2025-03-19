@@ -14,7 +14,7 @@ public class TodoMVCPage {
     }
 
     public void fill(String todoName) {
-        Browser.fill(By.className("new-todo"));
+        Browser.fill(By.className("new-todo"),todoName);
         Browser.pressEnter(By.className("new-todo"));
     }
 

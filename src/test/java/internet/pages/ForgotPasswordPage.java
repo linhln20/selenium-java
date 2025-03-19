@@ -14,7 +14,7 @@ public class ForgotPasswordPage {
     }
 
 public void retrievePassword(String email) {
-    fill(emailTxt);
+    fill(emailTxt, email);
     clickBtn(retrieveBtn);
     }
 

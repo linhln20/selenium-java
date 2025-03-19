@@ -140,15 +140,15 @@ public class Browser {
         js.executeScript(script, element);
     }
 
-    public static void fill(By locator) {
+    public static void fill(By locator, String text) {
         WebElement element = driver.findElement(locator);
         element.clear();
-        element.sendKeys();
+        element.sendKeys(text);
     }
 
     public static void fillInt(By locator, int text) {
         WebElement element = driver.findElement(locator);
-        element.clear();
+//        element.clear();
         element.sendKeys(String.valueOf(text));
     }
 
