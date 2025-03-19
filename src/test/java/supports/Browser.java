@@ -148,7 +148,7 @@ public class Browser {
 
     public static void fillInt(By locator, int text) {
         WebElement element = driver.findElement(locator);
-//        element.clear();
+        element.clear();
         element.sendKeys(String.valueOf(text));
     }
 
