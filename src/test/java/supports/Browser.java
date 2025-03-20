@@ -238,6 +238,7 @@ public class Browser {
     }
 
     public static void reloadPage(){
+        driver.manage().deleteAllCookies();
         driver.navigate().refresh();
     }
 
