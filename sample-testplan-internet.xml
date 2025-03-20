@@ -1,8 +1,8 @@
 <suite name="Internet">
     <groups>
         <run>
-            <include name="wip"/>
-            <exclude name="fix"/>
+            <exclude name="wip"/>
+<!--            <include name="fix"/>-->
         </run>
     </groups>
     <test name="Chrome Browser headless">
