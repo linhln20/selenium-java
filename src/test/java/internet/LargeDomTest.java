@@ -21,7 +21,7 @@ public class LargeDomTest {
         Assert.assertEquals(largeDomPage.getAllNodes(), 149);
     }
 
-    @Test //(groups = {"wip"})
+    @Test (groups = {"wip"})
     public void testScrollToBottom() {
         largeDomPage.scrollToBottom();
         Assert.assertTrue(largeDomPage.isAtBottom(), "Failed to scroll to the bottom!");
