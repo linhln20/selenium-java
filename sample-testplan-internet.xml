@@ -39,8 +39,8 @@
 <!--            <class name="internet.InputsTest"/>-->
 <!--            <class name="internet.JQueryUIMenuTest"/>-->
 <!--            <class name="internet.JavaScriptErrorTest"/>-->
-            <class name="internet.LargeDomTest"/>
-<!--            <class name="internet."/>-->
+<!--            <class name="internet.LargeDomTest"/>-->
+            <class name="internet.MultipleWindowsTest"/>
 <!--            <class name="internet."/>-->
 <!--            <class name="internet."/>-->
 <!--            <class name="internet."/>-->
