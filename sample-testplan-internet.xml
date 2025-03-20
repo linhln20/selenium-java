@@ -41,8 +41,8 @@
 <!--            <class name="internet.JavaScriptErrorTest"/>-->
 <!--            <class name="internet.LargeDomTest"/>-->
 <!--            <class name="internet.MultipleWindowsTest"/>-->
-            <class name="internet.NotificationMessagesTest"/>
-<!--            <class name="internet."/>-->
+<!--            <class name="internet.NotificationMessagesTest"/>-->
+            <class name="internet.SecureFileDownloadTest"/>
 <!--            <class name="internet."/>-->
 <!--            <class name="internet."/>-->
 <!--            <class name="internet."/>-->
