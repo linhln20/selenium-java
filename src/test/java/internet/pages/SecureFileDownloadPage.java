@@ -8,7 +8,7 @@ import java.nio.file.Paths;
 import static supports.Browser.visit;
 
 public class SecureFileDownloadPage {
-    String fileName = "AC-BOARD.txt";
+    String fileName = "Excel.xlsx";
     String downloadPath = System.getProperty("user.home") + "/Downloads";
 
     public void open(){
